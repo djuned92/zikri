@@ -1,1 +1,1 @@
-# Sistem informasi gungung
+# Sistem informasi gunung
