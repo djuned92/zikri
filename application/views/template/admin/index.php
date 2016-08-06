@@ -1,31 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    {head}
+  {head}
 </head>
+<body class="hold-transition skin-blue sidebar-mini">
 
-<body>
+<!-- Site wrapper -->
+<div class="wrapper">
 
-    <div id="wrapper">
+  {navbar-top}
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            {navbar-top}
+  {navbar-sidebar}
 
-           	{navbar-sidebar}
-        </nav>
+  {content}
 
-        {content}  
-        {footer}  
+  {footer}
 
-    </div>
-    <!-- /#wrapper -->
-     
-    {script}
-    
-    {mod-script}
+</div>
+<!-- ./wrapper -->
 
+{script}
 </body>
-
 </html>

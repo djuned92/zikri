@@ -1,29 +1,12 @@
-<!-- jQuery -->
-<script src="<?=base_url()?>assets/vendor/jquery/jquery.min.js"></script>
-
-<!-- jQuery UI -->
-<script src="<?=base_url()?>assets/vendor/jquery/jquery-ui.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="<?=base_url()?>assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- formvalidation js -->
-<script src="<?=base_url()?>assets/dist/js/formValidation.js"></script>
-
-<!-- bootstrap js -->
-<script src="<?=base_url()?>assets/dist/js/framework/bootstrap.js"></script>
-
-<!-- Metis Menu Plugin JavaScript -->
-<script src="<?=base_url()?>assets/dist/js/metisMenu.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="<?=base_url()?>assets/dist/js/sb-admin-2.js"></script>
-
-<!-- load Datatables bootsrap CDN -->
-<script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.js"></script>
-<script>
-	$(document).ready(function(){
-    	$('#myTable').DataTable();
-	});
-</script>
+<!-- jQuery 2.2.3 -->
+<script src="<?=base_url()?>assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="<?=base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="<?=base_url()?>assets/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="<?=base_url()?>assets/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="<?=base_url()?>assets/dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="<?=base_url()?>assets/dist/js/demo.js"></script>

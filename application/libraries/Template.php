@@ -11,10 +11,6 @@ class Template {
 
 	public function admin($content, $script = NULL, $data = NULL)
 	{
-		// fungsi ini untuk get pesan di navbar-top
-		$this->CI->load->model('pesan_model','pesan');
-		$data['pesan'] = $this->CI->pesan->get_pesan();
-
 		$data = array(
 			'head'			=> $this->CI->load->view('template/admin/head', $data, TRUE),
 			'navbar-top'	=> $this->CI->load->view('template/admin/navbar-top', $data, TRUE),

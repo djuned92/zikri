@@ -28,18 +28,8 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 
-	public function manage_users()
-	{	
-		$this->load->model('users_model','users');
-
-		$data['users'] = $this->users->get_all();
-		$this->load->view('manage_users', $data);
-	}
-
-	public function register()
+	public function test()
 	{
-		$this->users->create_user();
-		$this->session->set_flashdata('success', 'yeayyy'); // via ajax gk tampil, why?
-		redirect('welcome/manage_users');
+		$this->template->admin('home');
 	}
 }
