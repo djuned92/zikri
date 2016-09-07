@@ -20,5 +20,8 @@
 <!-- ./wrapper -->
 
 {script}
+
+<!-- another script -->
+{mod-script} 
 </body>
 </html>

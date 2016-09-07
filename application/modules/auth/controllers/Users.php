@@ -45,26 +45,25 @@ class Users extends CI_Controller {
 				//login sukses
 				$data = array(
 					'id_user'		=> $valid_user->id_user,
-					'id_pegawai'	=> $valid_user->id_pegawai,
 					'username'		=> $valid_user->username,
 					'level_user'	=> $valid_user->level_user,
-					'status'		=> $valid_user->status
+					'status_user'	=> $valid_user->status
 					);
 				$this->session->set_userdata($data);
 				
 				switch (TRUE)
 				{
-					case ($valid_user->level_user == 'Admin' && $valid_user->status == 'Aktif'):
+					case ($valid_user->level_user == 'admin' && $valid_user->status_user == 'Aktif'):
 						redirect('admin/home');
 						break;
-					case ($valid_user->level_user == 'SPV SDM' && $valid_user->status == 'Aktif'):
-						redirect('spv/home');
+					case ($valid_user->level_user == 'calon_pendaki' && $valid_user->status_user == 'Aktif'):
+						redirect('calon_pendaki/home');
 						break;
-					case ($valid_user->level_user == 'Asman' && $valid_user->status == 'Aktif'):
-						redirect('asman/home');
+					case ($valid_user->level_user == 'petugas_perijinan' && $valid_user->status_user == 'Aktif'):
+						redirect('petugas_pendakian/home');
 						break;
-					case ($valid_user->level_user == 'Manajer' && $valid_user->status == 'Aktif'):
-						redirect('manajer/home');
+					case ($valid_user->level_user == 'kepala_balai' && $valid_user->status_user == 'Aktif'):
+						redirect('kepala_balai/home');
 						break;
 					default : 
 						break;
