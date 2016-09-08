@@ -47,7 +47,8 @@ class Users extends CI_Controller {
 					'id_user'		=> $valid_user->id_user,
 					'username'		=> $valid_user->username,
 					'level_user'	=> $valid_user->level_user,
-					'status_user'	=> $valid_user->status
+					'status_user'	=> $valid_user->status,
+					'status_login'	=> 'login'
 					);
 				$this->session->set_userdata($data);
 				

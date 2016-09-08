@@ -30,7 +30,7 @@ class Kelola_berita extends CI_Controller {
 	{
 		$data = array(
 			'judul'	=> $this->input->post('judul'),
-			'isi'	=> $this->input->post('isi')
+			'isi'	=> nl2br($this->input->post('isi'))
 			);
 		$this->berita->add_berita($data);
 		$this->session->set_flashdata('add','Berita berhasil ditambah');

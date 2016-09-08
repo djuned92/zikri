@@ -26,12 +26,12 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
       <li>
-        <a href="../calendar.html">
+        <a href="<?=base_url()?>admin/home">
           <i class="fa fa-home"></i> <span>Home</span>
         </a>
       </li>
       <li>
-        <a href="../calendar.html">
+        <a href="<?=base_url()?>admin/kelola_user">
           <i class="fa fa-home"></i> <span>Kelola User</span>
         </a>
       </li>

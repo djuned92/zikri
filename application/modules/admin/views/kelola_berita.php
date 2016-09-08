@@ -43,8 +43,12 @@
 				          	<h2 class="box-title"><?=$r->judul?></h2>
 				          	<p><?=$r->created_at?></p>
 				        </div>
-				        <div class="box-body">  	
-				          	<p><?=$r->isi?></p>
+				        <div class="box-body"> 
+				        	<?php 
+				        		$berita = $r->isi;
+				        		$berita = (strlen($berita) > 25) ? substr($berita, 0, 100). ' ...': $berita;
+				        	?> 	
+				          	<p><?=$berita?></p>
 				          	<p><a class="btn btn-default" href="<?=base_url()?>admin/kelola_berita/lihat_berita/<?=$r->id_berita?>" role="button">Lihat Berita &raquo;</a></p>
 			        	</div>
 			        	
