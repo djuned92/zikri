@@ -69,6 +69,15 @@ class Users_model extends CI_Model{
 		}	
 	}
 
+	public function register($data_user, $data_grup)
+	{
+		$this->db->insert('user', $data_user);
+		$id_user = $this->db->insert_id();
+
+		$data_grup['id_user'] = $id_user;
+		$this->db->insert('grup_pendaki', $data_grup);
+	}
+
 	public function reset_password($id)
 	{
 		$this->load->helper('security');

@@ -53,14 +53,14 @@
                 	<div class="form-group">
 	                    <label class="col-sm-2 control-label">Judul</label>
 	                    <div class="col-sm-9">
-	                        <input type="text" name="judul" class="form-control" placeholder="Judul Berita" value="<?=$berita->judul?>">
+	                        <input type="text" name="judul" class="form-control" placeholder="Judul Berita" value="<?=$berita->judul?>" required>
 	                    </div>
                   	</div>
 
                   	<div class="form-group">
 	                    <label class="col-sm-2 control-label">isi</label>
 	                    <div class="col-sm-9">
-	                       <textarea class="form-control" rows="3" name="isi"><?=$berita->isi?></textarea>
+	                       <textarea class="form-control" rows="3" name="isi" required><?=$berita->isi?></textarea>
 	                    </div>
                   	</div>
 

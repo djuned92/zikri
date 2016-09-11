@@ -12,9 +12,10 @@
 			          	<h2 class="box-title">Pegawai</h2>
 			        </div>
 			        <div class="box-body">
-			        	<table class="table table-bordered table-striped">
+			        	<table id="example1" class="table table-bordered table-striped">
 			        		<thead>
 			        			<tr>
+			        				<th>#</th>
 			        				<th>Username</th>
 			        				<th>Nama</th>
 			        				<th>Jabatan</th>
@@ -23,8 +24,9 @@
 			        			</tr>
 			        		</thead>
 			        		<tbody>
-			        			<?php foreach($pegawai as $r): ?>
+			        			<?php $i = 1; foreach($pegawai as $r): ?>
 			        			<tr>
+			        				<td><?=$i++?></td>
 			        				<td><?=$r->username?></td>
 			        				<td><?=$r->nama?></td>
 			        				<td><?=$r->nama_jabatan?></td>
@@ -58,9 +60,10 @@
 			          	<h2 class="box-title">Grup Pendaki</h2>
 			        </div>
 			        <div class="box-body">
-			        	<table class="table table-bordered table-striped">
+			        	<table id="example2" class="table table-bordered table-striped">
 			        		<thead>
 			        			<tr>
+			        				<th>#</th>
 			        				<th>Username</th>
 			        				<th>Nama Grup</th>
 			        				<th>Alamat</th>
@@ -69,8 +72,9 @@
 			        			</tr>
 			        		</thead>
 			        		<tbody>
-			        			<?php foreach($grup_pendaki as $r): ?>
+			        			<?php $i = 1; foreach($grup_pendaki as $r): ?>
 			        			<tr>
+			        				<td><?=$i++?></td>
 			        				<td><?=$r->username?></td>
 			        				<td><?=$r->nama_grup?></td>
 			        				<td><?=$r->alamat?></td>

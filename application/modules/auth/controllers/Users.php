@@ -80,20 +80,47 @@ class Users extends CI_Controller {
 		redirect('auth/users');
 	}
 
-	// buat pesan
-	public function create_message()
+	public function register()
 	{
-		$this->load->model('pesan_model','pesan');
+		$this->load->helper('security');
 
-		$this->form_validation->set_rules('username','Username','required'); // sebatas trigger bootstrap validation
-		if ($this->form_validation->run() == FALSE)
+		$this->form_validation->set_rules('nama_grup', 'Nama Grup', 'trim|required');
+		$this->form_validation->set_rules('username', 'Email', 'trim|required');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
+		$this->form_validation->set_rules('provinsi_id', 'Provinsi', 'trim|required');
+		$this->form_validation->set_rules('kota_id', 'Kota', 'trim|required');
+
+		if($this->form_validation->run() == FALSE)
 		{
-			$this->load->view('login');
+			$this->load->model(array(
+				'provinsi_model' 	=> 'provinsi',
+				'kota_model'		=> 'kota' 
+				));
+
+			$data['provinsi'] = $this->provinsi->get_all();
+			$data['kota'] = $this->kota->get_all();
+			$this->load->view('register', $data);	
 		}
 		else 
 		{
-			$this->pesan->create_message();
-			redirect('auth/users');
+			// data user
+			$data_user = array(
+				'username'	=> $this->input->post('username'),
+				'password'	=> do_hash($this->input->post('password')),
+				'level_user'=> 'calon_pendaki'
+				);
+
+			// data grup pendaki
+			$data_grup = array(
+				'nama_grup'	=> $this->input->post('nama_grup'),
+				'alamat'	=> $this->input->post('alamat'),
+				'kota_id'	=> $this->input->post('kota_id')
+				);
+
+			$this->users->register($data_user, $data_grup);
+			redirect('auth/users','refresh');
 		}
+		
 	}
 }

@@ -27,4 +27,22 @@ class Template {
 		
 		$this->CI->parser->parse('template/admin/index', $data);
 	}
+
+	public function pendaki($content, $script = NULL, $data = NULL)
+	{
+		$data = array(
+			'head'			=> $this->CI->load->view('template/pendaki/head', $data, TRUE),
+			'navbar-top'	=> $this->CI->load->view('template/pendaki/navbar-top', $data, TRUE),
+			'content'		=> $this->CI->load->view($content, $data, TRUE),
+			'footer'		=> $this->CI->load->view('template/pendaki/footer', $data, TRUE),
+			'script'		=> $this->CI->load->view('template/pendaki/script', $data, TRUE)
+			);
+		
+		if ($script != NULL) 
+		{
+			$data['mod-script'] = $this->CI->load->view($script, $data, TRUE);
+		}
+		
+		$this->CI->parser->parse('template/pendaki/index', $data);
+	}
 }
