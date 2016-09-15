@@ -15,3 +15,5 @@
 <script src="<?=base_url()?>assets/dist/js/demo.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
 <script src="<?=base_url()?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- chained -->
+<script src="https://cdn.jsdelivr.net/jquery.chained/0.9.9/jquery.chained.min.js"></script>

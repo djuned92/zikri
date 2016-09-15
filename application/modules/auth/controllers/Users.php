@@ -113,7 +113,7 @@ class Users extends CI_Controller {
 
 			// data grup pendaki
 			$data_grup = array(
-				'nama_grup'	=> $this->input->post('nama_grup'),
+				'nama_grup'	=> $this->input->post('username'),
 				'alamat'	=> $this->input->post('alamat'),
 				'kota_id'	=> $this->input->post('kota_id')
 				);

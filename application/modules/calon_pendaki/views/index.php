@@ -3,7 +3,7 @@
     
     <section class="content-header">
       <h1>
-        Home
+        Home slider berita
       </h1>
     </section>
 

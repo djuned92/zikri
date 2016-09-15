@@ -34,10 +34,6 @@
     <?=validation_errors()?>
     <form action="<?=base_url()?>auth/users/register" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="nama_grup" placeholder="Nama Grup Pendaki" required>
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
         <input type="email" class="form-control" name="username" placeholder="Email" required>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>

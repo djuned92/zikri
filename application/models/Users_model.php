@@ -69,6 +69,27 @@ class Users_model extends CI_Model{
 		}	
 	}
 
+	public function add_user($data_user, $data_pegawai)
+	{
+		$this->db->insert('user', $data_user);
+		$id_user = $this->db->insert_id();
+		
+		$data_pegawai['id_user'] = $id_user;
+		$this->db->insert('pegawai', $data_pegawai);	
+	}
+
+	public function delete_user($id)
+	{
+		$this->db->where('id_user',$id)->delete('user');
+		$this->db->where('id_user',$id)->delete('pegawai');
+	}
+
+	public function update_user($id, $data_user, $data_pegawai)
+	{
+		$this->db->where('id_user',$id)->update('user', $data_user);
+		$this->db->where('id_user',$id)->update('pegawai', $data_pegawai);	
+	}
+
 	public function register($data_user, $data_grup)
 	{
 		$this->db->insert('user', $data_user);

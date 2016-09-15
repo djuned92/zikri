@@ -14,6 +14,7 @@
 	  			</div>
 
 	  			<div class="box-body">
+                    <img class="img-rounded" src="<?=base_url()?>assets/img/<?=$berita->gambar?>" style="widht:120px;height:120px;">
 	  				<p><?=$berita->isi?></p>
 	  			</div>
 
@@ -51,18 +52,25 @@
             <form action="<?=base_url()?>admin/kelola_berita/update/<?=$berita->id_berita?>" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                 	<div class="form-group">
-	                    <label class="col-sm-2 control-label">Judul</label>
-	                    <div class="col-sm-9">
+	                    <label class="col-sm-1 control-label">Judul</label>
+	                    <div class="col-sm-11">
 	                        <input type="text" name="judul" class="form-control" placeholder="Judul Berita" value="<?=$berita->judul?>" required>
 	                    </div>
                   	</div>
 
                   	<div class="form-group">
-	                    <label class="col-sm-2 control-label">isi</label>
-	                    <div class="col-sm-9">
-	                       <textarea class="form-control" rows="3" name="isi" required><?=$berita->isi?></textarea>
+	                    <label class="col-sm-1 control-label">isi</label>
+	                    <div class="col-sm-11">
+	                       <textarea class="form-control textarea" rows="3" name="isi" required><?=$berita->isi?></textarea>
 	                    </div>
                   	</div>
+
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">Gambar</label>
+                        <div class="col-sm-11">
+                            <input type="file" name="userfile" class="form-control">
+                        </div>
+                    </div>
 
                   	
 		        </div>

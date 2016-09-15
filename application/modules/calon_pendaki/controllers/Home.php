@@ -6,6 +6,9 @@ class Home extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		
+		$this->load->model('berita_model','berita');
+	
 		// if ($this->session->userdata('level_user') != 'calon_pendaki')
 		// {
 		// 	redirect('auth/users');
@@ -14,7 +17,8 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->template->pendaki('index','script');
+		$data['berita'] = $this->berita->get_all();
+		$this->template->pendaki('index','script', $data);
 	}
 
 }

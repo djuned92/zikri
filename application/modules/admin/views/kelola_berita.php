@@ -43,7 +43,8 @@
 				          	<h2 class="box-title"><?=$r->judul?></h2>
 				          	<p><?=$r->created_at?></p>
 				        </div>
-				        <div class="box-body"> 
+				        <div class="box-body">
+				        	<img class="img-rounded" src="<?=base_url()?>assets/img/<?=$r->gambar?>" style="widht:120px;height:120px;"> 
 				        	<?php 
 				        		$berita = $r->isi;
 				        		$berita = (strlen($berita) > 25) ? substr($berita, 0, 100). ' ...': $berita;
@@ -74,16 +75,23 @@
             <form action="<?=base_url()?>admin/kelola_berita/add" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                 	<div class="form-group">
-	                    <label class="col-sm-2 control-label">Judul</label>
-	                    <div class="col-sm-9">
+	                    <label class="col-sm-1 control-label">Judul</label>
+	                    <div class="col-sm-11">
 	                        <input type="text" name="judul" class="form-control" placeholder="Judul Berita" required>
 	                    </div>
                   	</div>
 
                   	<div class="form-group">
-	                    <label class="col-sm-2 control-label">isi</label>
-	                    <div class="col-sm-9">
-	                       <textarea class="form-control" rows="3" name="isi" required></textarea>
+	                    <label class="col-sm-1 control-label">isi</label>
+	                    <div class="col-sm-11">
+	                       <textarea class="form-control textarea" rows="3" name="isi" required></textarea>
+	                    </div>
+                  	</div>
+
+                  	<div class="form-group">
+	                    <label class="col-sm-1 control-label">Gambar</label>
+	                    <div class="col-sm-11">
+	                        <input type="file" name="userfile" class="form-control">
 	                    </div>
                   	</div>
 
