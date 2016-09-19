@@ -32,7 +32,7 @@
       </li>
       <li>
         <a href="<?=base_url()?>admin/kelola_user">
-          <i class="fa fa-user fa-fw"></i> <span>Kelola User</span>
+          <i class="fa fa-users fa-fw"></i> <span>Kelola User</span>
         </a>
       </li>
       <li>
@@ -42,7 +42,7 @@
       </li>
       <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Info Gunung</span>
+            <i class="fa fa-tree"></i> <span>Info Gunung</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

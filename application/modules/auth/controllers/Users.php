@@ -119,7 +119,7 @@ class Users extends CI_Controller {
 				);
 
 			$this->users->register($data_user, $data_grup);
-			redirect('auth/users','refresh');
+			redirect('auth/users');
 		}
 		
 	}

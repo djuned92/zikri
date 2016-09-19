@@ -2,7 +2,7 @@
   <nav class="navbar navbar-static-top">
     <div class="container">
       <div class="navbar-header">
-        <a href="../../index2.html" class="navbar-brand"><b>Admin</b>LTE</a>
+        <a href="<?=base_url()?>calon_pendaki/home" class="navbar-brand"><b>Admin</b>LTE</a>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
           <i class="fa fa-bars"></i>
         </button>
@@ -11,15 +11,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="<?=base_url()?>calon_pendaki/home">Home</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Info Gunung <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="<?=base_url()?>calon_pendaki/info_gunung/jalur_cibodas">Jalur Cibodas</a></li>
-              <li><a href="<?=base_url()?>calon_pendaki/info_gunung/jalur_putri">Jalur Putri</a></li>
-              <li><a href="<?=base_url()?>calon_pendaki/info_gunung/jalur_salabintana">Jalur Salabintana</a></li>
-            </ul>
-          </li>
+          <li><a href="<?=base_url()?>calon_pendaki/info_gunung">Info Gunung</a></li>
           <li><a href="<?=base_url()?>calon_pendaki/boking">Boking</a></li>
           <li><a href="<?=base_url()?>calon_pendaki/bayar">Bayar</a></li>
         </ul>

@@ -84,10 +84,21 @@ class Users_model extends CI_Model{
 		$this->db->where('id_user',$id)->delete('pegawai');
 	}
 
+	public function delete_grup_pendaki($id)
+	{
+		$this->db->where('id_user',$id)->delete('user');
+		$this->db->where('id_user',$id)->delete('grup_pendaki');
+	}
+
 	public function update_user($id, $data_user, $data_pegawai)
 	{
 		$this->db->where('id_user',$id)->update('user', $data_user);
 		$this->db->where('id_user',$id)->update('pegawai', $data_pegawai);	
+	}
+
+	public function update_grup_pendaki($id, $data_grup_pendaki)
+	{
+		$this->db->where('id_grup_pendaki',$id)->update('grup_pendaki', $data_grup_pendaki);	
 	}
 
 	public function register($data_user, $data_grup)

@@ -72,8 +72,20 @@ class Kelola_user extends CI_Controller {
 			'tgl_lahir'		=> $this->input->post('tgl_lahir')
 			);
 		$this->users->update_user($id, $data_user, $data_pegawai);
-		$this->session->set_flashdata('add_user','User berhasil ditambah');
+		$this->session->set_flashdata('update_user','User berhasil diperbaharui');
 		redirect('admin/kelola_user');	
+	}
+
+	public function update_grup_pendaki($id)
+	{
+		$data_grup_pendaki = array(
+			'nama_grup'		=> $this->input->post('nama_grup'),
+			'alamat'		=> $this->input->post('alamat'),
+			'kota_id'		=> $this->input->post('kota_id')
+			);
+		$this->users->update_grup_pendaki($id, $data_grup_pendaki);
+		$this->session->set_flashdata('update_grup_pendaki','Grup pendaki berhasil diperbaharui');
+		redirect('admin/kelola_user');		
 	}
 
 	public function delete($id)
@@ -81,6 +93,13 @@ class Kelola_user extends CI_Controller {
 		$this->users->delete_user($id);
 		$this->session->set_flashdata('delete_user', 'User berhasil dihapus');
 		redirect('admin/kelola_user');
+	}
+
+	public function delete_grup_pendaki($id)
+	{
+		$this->users->delete_grup_pendaki($id);
+		$this->session->set_flashdata('delete_grup_pendaki', 'Grup pendaki berhasil dihapus');
+		redirect('admin/kelola_user');	
 	}
 
 }
