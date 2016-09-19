@@ -5,9 +5,9 @@ class Jalur_cibodas_model extends CI_Model {
 
 	public function get_all()
 	{
-		$q = $this->db->select('k.*,jp.*')
-						->from('kuota as k')
-						->join('jalur_pendakian as jp','jp.id_jalur_pendakian = k.id_jalur_pendakian')
+		$q = $this->db->select('j.*,jp.*')
+						->from('jadwal_pendakian as j')
+						->join('jalur_pendakian as jp','jp.id_jalur_pendakian = j.id_jalur_pendakian')
 						->where('jp.id_jalur_pendakian','1')
 						->get();
 		return $q->result();

@@ -10,7 +10,7 @@ class Boking extends CI_Controller {
 			'boking_model'		=> 'boking',
 			'provinsi_model'	=> 'provinsi',
 			'kota_model'		=> 'kota',
-			'info_gunung_model' => 'info_gunung'
+			'jadwal_pendakian_model' => 'jadwal_pendakian'
 			));
 
 		// if ($this->session->userdata('level_user') != 'calon_pendaki')
@@ -19,12 +19,17 @@ class Boking extends CI_Controller {
 		// }
 	}
 
-	public function index($id_kuota)
+	public function index($id_jadwal_pendakian = NULL)
 	{
-		$data['boking'] = $this->info_gunung->get_id_kuota($id_kuota);
+		$data['boking'] = $this->jadwal_pendakian->get_id_jadwal_pendakian($id_jadwal_pendakian);
 		$data['provinsi'] = $this->provinsi->get_all();
 		$data['kota'] = $this->kota->get_all();
 		$this->template->pendaki('boking','script', $data);
+	}
+
+	public function add()
+	{
+		
 	}
 
 }

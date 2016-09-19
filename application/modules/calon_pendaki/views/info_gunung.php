@@ -24,18 +24,18 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <!-- foreach ke 1 ini group by berdasarkan tanggal -->
-                  <?php foreach($tanggal_kuota as $r): ?> 
+                  <!-- foreach ke 1 ini group by tanggal -->
+                  <?php foreach($tanggal_pendakian as $r): ?> 
                   <tr>
-                    <td><?=$r->tanggal_kuota?></td>
+                    <td><?=$r->tanggal_pendakian?></td>
                     
                     <!-- foreach ke 2 get kuota berdasarkan tanggal -->
                     <?php 
-                      $this->load->model('info_gunung_model','info_gunung');
-                      $info_gunung = $this->info_gunung->get_kuota($r->tanggal_kuota);
+                      $this->load->model('jadwal_pendakian_model','jadwal_pendakian');
+                      $info_gunung = $this->jadwal_pendakian->get_kuota($r->tanggal_pendakian);
                       
                       foreach($info_gunung as $datas):
-                        if($datas->tanggal_kuota == $r->tanggal_kuota):
+                        if($datas->tanggal_pendakian == $r->tanggal_pendakian):
                     ?>
                     <td>
                       <?php 
@@ -46,7 +46,7 @@
                         else
                         {
                           echo 
-                            "<a href='boking/index/$datas->id_kuota'>
+                            "<a href='boking/index/$datas->id_jadwal_pendakian'>
                               $datas->kuota
                             </a>";
                         }

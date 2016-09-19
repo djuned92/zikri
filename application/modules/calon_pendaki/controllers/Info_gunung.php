@@ -7,7 +7,7 @@ class Info_gunung extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model(array(
-			'info_gunung_model' => 'info_gunung',
+			'jadwal_pendakian_model' => 'jadwal_pendakian',
 			'provinsi_model'	=> 'provinsi',
 			'kota_model'		=> 'kota'
 			));
@@ -20,7 +20,7 @@ class Info_gunung extends CI_Controller {
 
 	public function index()
 	{
-		$data ['tanggal_kuota'] = $this->info_gunung->get_tanggal_kuota();
+		$data ['tanggal_pendakian'] = $this->jadwal_pendakian->get_tanggal_kuota();
 		$data['provinsi'] = $this->provinsi->get_all();
 		$data['kota'] = $this->kota->get_all();
 		$this->template->pendaki('info_gunung','script',$data);

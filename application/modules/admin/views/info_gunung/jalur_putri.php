@@ -33,7 +33,7 @@
 		        			<?php $i = 1; foreach($jalur_putri as $r): ?>
 		        			<tr>
 		        				<td><?=$i++?></td>
-		        				<td><?=$r->tanggal_kuota?></td>
+		        				<td><?=$r->tanggal_pendakian?></td>
 		        				<td><?=$r->kuota?></td>
 		        				<td><?=$r->harga?></td>
 		        				<td><?=$r->status_jalur_pendakian?></td>
