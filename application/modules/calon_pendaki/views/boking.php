@@ -3,7 +3,7 @@
     
     <section class="content-header">
       <h3>
-        Boking <?=$boking->nama_jalur?> Tanggal <?=$boking->tanggal_kuota?>
+        Boking <?=$boking->nama_jalur?> Tanggal <?=$boking->tanggal_kuota?> <?=$boking->nama_jalur?>
       </h3>
     </section>
 
