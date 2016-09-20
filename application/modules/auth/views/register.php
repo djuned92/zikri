@@ -42,24 +42,8 @@
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="alamat" placeholder="Alamat" required>
-        <span class="glyphicon glyphicon-home form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <select class="form-control"  id="select_provinsi">
-            <option value="#">- Pilih Provinsi - </option>
-            <?php foreach ($provinsi as $r):?>
-            <option value="<?=$r->provinsi_id?>"><?=$r->provinsi_nama?></option>
-            <?php endforeach ; ?>
-        </select>
-      </div>
-      <div class="form-group has-feedback">
-        <select class="form-control" name="kota_id" id="select_kota">
-            <option value="#">- Pilih Kota - </option>
-            <?php foreach ($kota as $r):?>
-            <option value="<?=$r->kota_id?>" class="<?=$r->provinsi_id?>"><?=$r->kokab_nama?></option>
-            <?php endforeach ; ?>
-        </select>
+        <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required>
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <!-- /.col -->

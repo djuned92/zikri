@@ -84,23 +84,13 @@ class Users extends CI_Controller {
 	{
 		$this->load->helper('security');
 
-		$this->form_validation->set_rules('nama_grup', 'Nama Grup', 'trim|required');
 		$this->form_validation->set_rules('username', 'Email', 'trim|required');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required');
-		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
-		$this->form_validation->set_rules('provinsi_id', 'Provinsi', 'trim|required');
-		$this->form_validation->set_rules('kota_id', 'Kota', 'trim|required');
+		$this->form_validation->set_rules('confirm_password', 'Confirm Password', 'trim|required|matches[password]');
 
 		if($this->form_validation->run() == FALSE)
 		{
-			$this->load->model(array(
-				'provinsi_model' 	=> 'provinsi',
-				'kota_model'		=> 'kota' 
-				));
-
-			$data['provinsi'] = $this->provinsi->get_all();
-			$data['kota'] = $this->kota->get_all();
-			$this->load->view('register', $data);	
+			$this->load->view('register');	
 		}
 		else 
 		{
@@ -111,14 +101,7 @@ class Users extends CI_Controller {
 				'level_user'=> 'calon_pendaki'
 				);
 
-			// data grup pendaki
-			$data_grup = array(
-				'nama_grup'	=> $this->input->post('username'),
-				'alamat'	=> $this->input->post('alamat'),
-				'kota_id'	=> $this->input->post('kota_id')
-				);
-
-			$this->users->register($data_user, $data_grup);
+			$this->users->register($data_user);
 			redirect('auth/users');
 		}
 		

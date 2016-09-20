@@ -101,13 +101,9 @@ class Users_model extends CI_Model{
 		$this->db->where('id_grup_pendaki',$id)->update('grup_pendaki', $data_grup_pendaki);	
 	}
 
-	public function register($data_user, $data_grup)
+	public function register($data_user)
 	{
 		$this->db->insert('user', $data_user);
-		$id_user = $this->db->insert_id();
-
-		$data_grup['id_user'] = $id_user;
-		$this->db->insert('grup_pendaki', $data_grup);
 	}
 
 	public function reset_password($id)
