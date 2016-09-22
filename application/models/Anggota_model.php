@@ -17,6 +17,15 @@ class Anggota_model extends CI_Model {
 		return $q->result();
 	}
 
+	public function add_anggota($anggota)
+	{
+		$this->db->insert_batch('anggota',$anggota);
+	}
+
+	public function add_grup_anggota($grup_anggota)
+	{
+		$this->db->insert_batch('grup_anggota',$grup_anggota);
+	}
 
 }
 

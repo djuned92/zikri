@@ -13,7 +13,14 @@
         <ul class="nav navbar-nav">
           <li><a href="<?=base_url()?>calon_pendaki/info_gunung">Info Gunung</a></li>
           <li><a href="<?=base_url()?>calon_pendaki/boking">Boking</a></li>
+          <li><a href="<?=base_url()?>calon_pendaki/grup">Grup</a></li>
           <li><a href="<?=base_url()?>calon_pendaki/bayar">Bayar</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?=ucfirst($this->session->userdata('username'))?> <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+            <li><a href="<?=base_url()?>auth/users/logout">Sign out</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -21,26 +28,28 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">   
           <!-- User Account Menu -->
-          <li class="dropdown user user-menu">
+          <!-- <li class="dropdown user user-menu"> -->
             <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            
+            <!-- <a href="#" class="pull-right"> -->
               <!-- The user image in the navbar-->
-              <img src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" class="user-image" alt="User Image">
+              <!-- <img src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" class="user-image" alt="User Image"> -->
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Alexander Pierce</span>
-            </a>
-            <ul class="dropdown-menu">
+              <!-- <span class="hidden-xs">Alexander Pierce</span> 
+            </a> -->
+
+            <!-- <ul class="dropdown-menu"> -->
               <!-- The user image in the menu -->
-              <li class="user-header">
+              <!-- <li class="user-header">
                 <img src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   Alexander Pierce - Web Developer
                   <small>Member since Nov. 2012</small>
                 </p>
-              </li>
+              </li> -->
               <!-- Menu Body -->
-              <li class="user-body">
+              <!-- <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
                     <a href="#">Followers</a>
@@ -52,19 +61,18 @@
                     <a href="#">Friends</a>
                   </div>
                 </div>
-                <!-- /.row -->
-              </li>
+              </li> -->
               <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
+              <!-- <li class="user-footer"> -->
+                <!-- <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
+                </div> -->
+                <!-- <div class="pull-right">
                   <a href="<?=base_url()?>auth/users/logout" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
-            </ul>
-          </li>
+            </ul> -->
+          <!-- </li> -->
         </ul>
       </div>
       <!-- /.navbar-custom-menu -->

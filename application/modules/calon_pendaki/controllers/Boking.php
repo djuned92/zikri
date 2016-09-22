@@ -8,8 +8,7 @@ class Boking extends CI_Controller {
 		parent::__construct();
 		$this->load->model(array(
 			'boking_model'		=> 'boking',
-			'provinsi_model'	=> 'provinsi',
-			'kota_model'		=> 'kota',
+			'grup_pendaki_model'		=> 'grup_pendaki',
 			'jadwal_pendakian_model' => 'jadwal_pendakian'
 			));
 
@@ -21,15 +20,28 @@ class Boking extends CI_Controller {
 
 	public function index($id_jadwal_pendakian = NULL)
 	{
+		// diset_userdata file di auth/users
+		$id = $this->session->userdata('id_user');
+
+		// id berdasarkan user yang login
+		$data['grup_pendaki'] = $this->grup_pendaki->grup_by_id($id);
 		$data['boking'] = $this->jadwal_pendakian->get_id_jadwal_pendakian($id_jadwal_pendakian);
-		$data['provinsi'] = $this->provinsi->get_all();
-		$data['kota'] = $this->kota->get_all();
 		$this->template->pendaki('boking','script', $data);
 	}
 
 	public function add()
 	{
-		
+		// boking
+		$boking = array(
+			'id_jadwal_pendakian'	=> $this->input->post('id_jadwal_pendakian'),
+			'id_grup_pendaki'		=> $this->input->post('id_grup_pendaki'),
+			'tgl_boking'			=> $this->input->post('tgl_boking'),
+			'status'				=> 'Pending'
+			);
+
+		$this->boking->add_boking($boking);
+		$this->session->set_flashdata('success_boking','Boking telah berhasil');
+		redirect('calon_pendaki/home');
 	}
 
 }

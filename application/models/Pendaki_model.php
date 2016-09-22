@@ -18,7 +18,6 @@ class Pendaki_model extends CI_Model {
 		return $q->result();
 	}
 	
-
 }
 
 /* End of file Pendaki_model.php */

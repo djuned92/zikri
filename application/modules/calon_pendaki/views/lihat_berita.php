@@ -1,7 +1,7 @@
 <div class="content-wrapper">
   <div class="container">
     
-    <section class="content-header">
+    <section class="content-header" style="padding-top:0px;">
       <h3>
         <?=$berita->judul?>
       </h3>

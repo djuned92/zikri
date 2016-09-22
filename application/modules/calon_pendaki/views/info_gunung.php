@@ -1,7 +1,7 @@
 <div class="content-wrapper">
   <div class="container">
     
-    <section class="content-header">
+    <section class="content-header" style="padding-top:0px;">
       <h3>
         Info Gunung Gede
       </h3>
@@ -16,6 +16,9 @@
 
              <table id="example1" class="table table-bordered table-striped">
                 <thead>
+                  <tr>
+                    <th colspan="4"><div align="center">Info Kuota dan Status Jalur</div></th>
+                  </tr>
                   <tr>
                     <th>Tanggal</th>
                     <th>Cibodas</th>
@@ -50,10 +53,8 @@
                               $datas->kuota
                             </a>";
                         }
-                      ?>
-                    </td>
+                      ?>                    </td>
                     <?php endif; endforeach;?>
-                      
                   </tr>
                   <?php endforeach; ?>
                 </tbody>
