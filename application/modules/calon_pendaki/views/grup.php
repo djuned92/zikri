@@ -17,7 +17,31 @@
           </button>
         </div>
         <div class="box-body">
-          The great content goes here
+          <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Nama Grup</th>
+                    <th>Create at</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- foreach ke 1 ini group by tanggal -->
+                  <?php $i = 1; foreach($grup_pendaki as $r): ?> 
+                  <tr>
+                    <td><?=$i++?></td>
+                    <td><?=$r->nama_grup;?></td>
+                    <td><?=$r->created_at?></td>
+                    <td>
+                      <button class="btn btn-xs btn-warning" data-toggle="modal" data-target="#detailGrupPendaki<?=$r->id_grup_pendaki?>" data-placement="bottom" title="">
+                         <i class="fa fa-eye"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
         </div>
       </div>
     
@@ -25,3 +49,6 @@
 
   </div>
 </div>
+
+<!-- modal grup pendaki -->
+<?php include "modal/grup_pendaki.php"; ?>

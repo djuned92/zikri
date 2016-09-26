@@ -32,7 +32,7 @@
                 <div class="form-group">
                   <label class="col-md-2 control-label">Nama Grup</label>
                   <div class="col-md-10">
-                      <select class="form-control" required>
+                      <select class="form-control" name="id_grup_pendaki" required>
                         <option value="">Pilih Grup</option>
                         <?php foreach($grup_pendaki as $r): ?>
                         <option value="<?=$r->id_grup_pendaki?>"><?=$r->nama_grup?></option>
@@ -45,19 +45,19 @@
                 <div class="form-group">
                   <label class="col-md-2 control-label">Jumlah Pendaki</label>
                   <div class="col-md-10">
-                      <input type="text" name="jumlah_pendaki" class="form-control" placeholder="Jumlah Pendaki" readonly>
+                      <input type="text" name="jumlah_pendaki" class="form-control" value="<?=$total_pendaki?>" placeholder="Jumlah Pendaki" readonly>
                   </div>
                 </div>
                 
                 <div class="form-group">
                   <label class="col-md-2 control-label">Total Harga</label>
                   <div class="col-md-10">
-                      <input type="text" name="" class="form-control" placeholder="Total Harga" readonly>
+                      <input type="text" name="" class="form-control" placeholder="Total Harga" value="<?=$boking->harga*$total_pendaki;?>" readonly>
                   </div>
                 </div>
                 
                 <div class="form-group">
-                  <div class="col-md-12 col-md-offset-2">
+                  <div class="col-md-10 col-md-offset-2">
                     <button type="submit" class="btn btn-primary btn-block btn-flat">Boking</button>
                   </div>
                 </div>
