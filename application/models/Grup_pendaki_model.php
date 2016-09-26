@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Grup_pendaki_model extends CI_Model {
 
+	// id by user login
 	public function grup_by_id($id)
 	{
 		$q = $this->db->select('gp.*, u.id_user')
