@@ -30,10 +30,28 @@
           <i class="fa fa-home fa-fw"></i> <span>Home</span>
         </a>
       </li>
-      <li>
+      <!-- <li>
         <a href="<?=base_url()?>admin/kelola_user">
           <i class="fa fa-users fa-fw"></i> <span>Kelola User</span>
         </a>
+      </li> -->
+      <li class="treeview">
+        <a href="#">
+            <i class="fa fa-tree"></i> <span>Kelola User</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li>
+              <a href="<?=base_url()?>admin/kelola_user/pegawai">
+                <i class="fa fa-circle-o fa-fw"></i>Pegawai</a>
+            </li>
+            <li>
+              <a href="<?=base_url()?>admin/kelola_user/pendaki">
+                <i class="fa fa-circle-o fa-fw"></i>Pendaki</a>
+            </li>
+          </ul>
       </li>
       <li>
         <a href="<?=base_url()?>admin/kelola_berita">
