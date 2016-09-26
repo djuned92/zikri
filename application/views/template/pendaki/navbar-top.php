@@ -11,8 +11,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="<?=base_url()?>calon_pendaki/info_gunung">Info Gunung</a></li>
-          <li><a href="<?=base_url()?>calon_pendaki/boking">Boking</a></li>
+          <li><a href="<?=base_url()?>calon_pendaki/info_gunung">Boking</a></li>
           <li><a href="<?=base_url()?>calon_pendaki/grup">Grup</a></li>
           <li><a href="<?=base_url()?>calon_pendaki/bayar">Bayar</a></li>
           <li class="dropdown">
