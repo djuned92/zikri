@@ -12,9 +12,11 @@
      
       <div class="box box-default">
         <div class="box-header with-border">
-          <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#addGrupPendaki">
-              <i class="fa fa-plus"></i> Add Grup Pendaki
-          </button>
+          <a href="<?=base_url()?>calon_pendaki/grup/add">
+            <button class="btn btn-xs btn-primary">
+                <i class="fa fa-plus"></i> Add Grup Pendaki
+            </button>
+          </a>
         </div>
         <div class="box-body">
           <table id="example1" class="table table-bordered table-striped">

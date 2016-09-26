@@ -38,7 +38,6 @@
                         <option value="<?=$r->id_grup_pendaki?>"><?=$r->nama_grup?></option>
                         <?php endforeach; ?>
                       </select>
-                      <span class="help-block"><a href="<?=base_url()?>calon_pendaki/grup">Add Grup</a></span>
                   </div>
                 </div>
 

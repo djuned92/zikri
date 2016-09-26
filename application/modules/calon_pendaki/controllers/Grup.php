@@ -31,34 +31,44 @@ class Grup extends CI_Controller {
 
 	public function add()
 	{
-		// grup pendaki
-		$grup_pendaki = array(
-			'id_user'	=> $this->input->post('id_user'),
-			'kota_id'	=> '44',
-			'nama_grup'	=> $this->input->post('nama_grup'),
-			'alamat'	=> 'Bekasi'
-			);
-		$this->grup_pendaki->add_grup_pendaki($grup_pendaki);
-		$id_grup_pendaki = $this->db->insert_id();
-
-		// anggota grup pendaki
-		$level_anggota = $this->input->post('level_anggota');
-		for($i = 0; $i < count($level_anggota); $i++)
+		$this->form_validation->set_rules('nama_grup', 'Nama Grup', 'trim|required');
+		if($this->form_validation->run() == FALSE)
 		{
-			$anggota[] = array(
-				'id_grup_pendaki'	=> $id_grup_pendaki,
-				'level_anggota'		=> $level_anggota[$i],
-				'no_identitas'		=> $this->input->post('no_identitas')[$i],
-				'nama_anggota'		=> $this->input->post('nama_anggota')[$i],
-				'alamat'			=> $this->input->post('alamat')[$i],
-				'kota_id'			=> $this->input->post('kota_id')[$i],
-				'email'				=> $this->input->post('email')[$i],
-				'no_telp'			=> $this->input->post('no_telp')[$i]
-				);
+			$data['provinsi'] = $this->provinsi->get_all();
+			$data['kota'] = $this->kota->get_all();
+			$this->template->pendaki('add_grup','script', $data);
 		}
-		$this->anggota->add_anggota($anggota);
-		$this->session->set_flashdata('add_grup_pendaki','Berhasil menambah grup pendaki');
-		redirect('calon_pendaki/grup');
+		else
+		{		
+			// grup pendaki
+			$grup_pendaki = array(
+				'id_user'	=> $this->input->post('id_user'),
+				'kota_id'	=> '44',
+				'nama_grup'	=> $this->input->post('nama_grup'),
+				'alamat'	=> 'Bekasi'
+				);
+			$this->grup_pendaki->add_grup_pendaki($grup_pendaki);
+			$id_grup_pendaki = $this->db->insert_id();
+
+			// anggota grup pendaki
+			$level_anggota = $this->input->post('level_anggota');
+			for($i = 0; $i < count($level_anggota); $i++)
+			{
+				$anggota[] = array(
+					'id_grup_pendaki'	=> $id_grup_pendaki,
+					'level_anggota'		=> $level_anggota[$i],
+					'no_identitas'		=> $this->input->post('no_identitas')[$i],
+					'nama_anggota'		=> $this->input->post('nama_anggota')[$i],
+					'alamat'			=> $this->input->post('alamat')[$i],
+					'kota_id'			=> $this->input->post('kota_id')[$i],
+					'email'				=> $this->input->post('email')[$i],
+					'no_telp'			=> $this->input->post('no_telp')[$i]
+					);
+			}
+			$this->anggota->add_anggota($anggota);
+			$this->session->set_flashdata('add_grup_pendaki','Berhasil menambah grup pendaki');
+			redirect('calon_pendaki/grup');
+		}
 	}
 
 }
