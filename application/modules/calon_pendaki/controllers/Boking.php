@@ -26,8 +26,15 @@ class Boking extends CI_Controller {
 		// id berdasarkan user yang login
 		$data['grup_pendaki'] = $this->grup_pendaki->grup_by_id($id);
 		$data['boking'] = $this->jadwal_pendakian->get_id_jadwal_pendakian($id_jadwal_pendakian);
-		$data['total_pendaki'] = $this->boking->total_pendaki(6);
+		// $data['total_pendaki'] = $this->boking->total_pendaki(6);
 		$this->template->pendaki('boking','script', $data);
+	}
+
+	public function total_pendaki()
+	{
+		$id_grup_pendaki = $this->input->post('id_grup_pendaki');
+		$total_pendaki = $this->boking->total_pendaki($id_grup_pendaki);
+		echo json_encode($total_pendaki);
 	}
 
 	public function add()

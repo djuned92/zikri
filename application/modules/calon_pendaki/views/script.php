@@ -15,11 +15,19 @@
 
 <!-- chained provinsi kota -->
 <script>
-  $('#select_kota').chained('#select_provinsi');
+   $('#select_kota').chained('#select_provinsi');
 </script>
 
 <script>
-  $.ajax(
-    ''
-    )
+   $(document).ready(function(){
+     $.ajax({
+       url:"<?php echo base_url('calon_pendaki/boking/total_pendaki') ?> ",
+       type:"GET",
+       data:"",
+       dataType:"json",
+     })
+     .done(function(){
+       (#total_pendaki).attr("value")
+     });
+   });
 </script>
