@@ -3,7 +3,7 @@
     
     <section class="content-header">
       <h1>
-        Berita Terkini
+        Berita Gunung Gede
       </h1>
     </section>
 

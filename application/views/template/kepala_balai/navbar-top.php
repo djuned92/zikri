@@ -11,7 +11,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
         <ul class="nav navbar-nav">
-          <!-- <li><a href="<?=base_url()?>kepala_balai/info_gunung">Info Gunung</a></li> -->
+          <li><a href="<?=base_url()?>kepala_balai/info_gunung">Info Gunung</a></li>
          <!--  <li><a href="<?=base_url()?>kepala_balai/boking">Boking</a></li>
           <li><a href="<?=base_url()?>kepala_balai/bayar">Bayar</a></li> -->
         </ul>
