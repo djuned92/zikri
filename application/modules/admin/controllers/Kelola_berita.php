@@ -95,9 +95,10 @@ class Kelola_berita extends CI_Controller {
 						'isi'	=> nl2br($this->input->post('isi')),
 						'gambar'=> $this->upload->data('file_name')
 						);
+		        	// $id_berita = $this->input->post('id_berita');
 					$this->berita->update_berita($id, $data);
 					$this->session->set_flashdata('update','Berita berhasil diperbaharui');
-					redirect('admin/kelola_berita');
+					redirect('admin/kelola_berita/lihat_berita'.$id);
 		        }
 	        }
 	        else // tanpa gambar diisi
@@ -106,9 +107,10 @@ class Kelola_berita extends CI_Controller {
 					'judul'	=> $this->input->post('judul'),
 					'isi'	=> nl2br($this->input->post('isi'))
 					);
+	        	$id_berita = $this->input->post('id_berita');
 				$this->berita->update_berita($id, $data);
 				$this->session->set_flashdata('update','Berita berhasil diperbaharui');
-				redirect('admin/kelola_berita');
+				redirect('admin/kelola_berita/lihat_berita/'.$id);
 	        }
 		}
 	}
