@@ -5,6 +5,17 @@
 	<section class="content">
 	  <h1>Lihat Berita</h1>
 
+        <div class="row">
+            <div class="col-md-12">
+                <?php if($this->session->flashdata('update')):?>
+                    <div class="alert alert-info">
+                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                        <strong><?php echo $this->session->flashdata('update'); ?></strong>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+
 	  <div class="row">
 	  	<div class="col-md-12">
 	  		<div class="box box-solid">

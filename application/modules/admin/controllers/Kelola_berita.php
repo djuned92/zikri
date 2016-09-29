@@ -118,7 +118,7 @@ class Kelola_berita extends CI_Controller {
 	public function delete($id)
 	{
 		$this->berita->delete_berita($id);
-		$this->session->set_flashdata('update','Berita berhasil dihapus');
+		$this->session->set_flashdata('delete','Berita berhasil dihapus');
 		redirect('admin/kelola_berita');
 	}
 }

@@ -20,11 +20,6 @@
 	                    <a href="#" class="close" data-dismiss="alert">&times;</a>
 	                    <strong><?php echo $this->session->flashdata('add'); ?></strong>
 	                </div>
-	            <?php elseif($this->session->flashdata('update')):?>
-	                <div class="alert alert-info">
-	                    <a href="#" class="close" data-dismiss="alert">&times;</a>
-	                    <strong><?php echo $this->session->flashdata('update'); ?></strong>
-	                </div>
 	            <?php elseif($this->session->flashdata('delete')):?>
 	                <div class="alert alert-info">
 	                    <a href="#" class="close" data-dismiss="alert">&times;</a>
