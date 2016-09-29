@@ -15,7 +15,7 @@
           <li><a href="<?=base_url()?>calon_pendaki/grup">Grup</a></li>
           <li><a href="<?=base_url()?>calon_pendaki/bayar">Bayar</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?=ucfirst($this->session->userdata('username'))?> <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?=$this->session->userdata('username')?> <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
             <li><a href="<?=base_url()?>auth/users/logout">Sign out</a></li>
             </ul>
