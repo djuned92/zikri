@@ -98,7 +98,7 @@ class Kelola_berita extends CI_Controller {
 		        	// $id_berita = $this->input->post('id_berita');
 					$this->berita->update_berita($id, $data);
 					$this->session->set_flashdata('update','Berita berhasil diperbaharui');
-					redirect('admin/kelola_berita/lihat_berita'.$id);
+					redirect('admin/kelola_berita/lihat_berita/'.$id);
 		        }
 	        }
 	        else // tanpa gambar diisi
