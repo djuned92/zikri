@@ -52,7 +52,7 @@ class Pembayaran extends CI_Controller {
 					'tanggal_bayar'		=> $this->input->post('tanggal_bayar'),
 					'nominal_transfer'	=> $this->input->post('nominal_transfer'),
 					'bukti_transfer'	=> $this->upload->data('file_name'),
-					'status_pembayaran'	=> 'Pending'
+					'status'			=> 'Pending'
 					);
 				$this->pembayaran->add_pembayaran($data);
 				$this->session->set_flashdata('add','Terima kasih telah melakukan pembayaran, informasi lebih lanjut akan kami infokan lewat email');
