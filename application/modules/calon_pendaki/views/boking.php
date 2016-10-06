@@ -3,13 +3,23 @@
     
     <section class="content-header" style="padding-top:0px;">
       <h3>
-        Boking <?=$boking->nama_jalur?> Tanggal <?=$boking->tanggal_pendakian?> 
+        Boking <?=$boking->nama_jalur?> Tanggal <?php $tanggal = date_create($boking->tanggal_pendakian); echo date_format($tanggal,"d M Y");?>
       </h3>
+      <div class="row">
+        <div class="col-md-12">
+          <?php if($this->session->flashdata('success_boking')):?>
+              <div class="alert alert-info">
+                  <a href="#" class="close" data-dismiss="alert">&times;</a>
+                  <strong><?php echo $this->session->flashdata('success_boking'); ?></strong>
+              </div>
+          <?php endif; ?>
+        </div>
+      </div>
     </section>
 
     <!-- Main content -->
     <section class="content">
-
+      
       <div class="box box-default">
         
         <div class="box-body">
@@ -22,6 +32,12 @@
                 <!-- input hidden boking -->
                 <input type="hidden" name="id_jadwal_pendakian" value="<?=$boking->id_jadwal_pendakian?>">
 
+                <!-- input hidden kode jalur -->
+                <input type="hidden" name="kode_jalur" value="<?=$boking->kode_jalur?>">
+
+                <!-- input hidden tanggal pendakian -->
+                <input type="hidden" name="tanggal_pendakian" value="<?=$boking->tanggal_pendakian?>">
+
                 <div class="form-group">
                   <label class="col-md-2 control-label">Tanggal Boking</label>
                   <div class="col-md-10">
@@ -32,26 +48,31 @@
                 <div class="form-group">
                   <label class="col-md-2 control-label">Nama Grup</label>
                   <div class="col-md-10">
-                      <select class="form-control" name="id_grup_pendaki" required>
+                      <select class="form-control" name="id_grup_pendaki" id="id_grup_pendaki" required>
                         <option value="">Pilih Grup</option>
                         <?php foreach($grup_pendaki as $r): ?>
-                        <option value="<?=$r->id_grup_pendaki?>"><?=$r->nama_grup?></option>
+                        <option value="<?=$r->id_grup_pendaki?>"><?=$r->nama_grup?> (<?=$r->id_grup_pendaki?>)</option>
                         <?php endforeach; ?>
                       </select>
                   </div>
                 </div>
-
+                
+                <?php foreach($email as $r): ?>
+                <!-- input hidden -->
+                <input type="hidden" name="username" value="<?=$r->username?>">
+                <?php endforeach; ?>
+                
                 <div class="form-group">
                   <label class="col-md-2 control-label">Jumlah Pendaki</label>
                   <div class="col-md-10">
-                      <input type="text" name="jumlah_pendaki" class="form-control" value="" id="total_pendaki" placeholder="Jumlah Pendaki" readonly>
+                      <input type="text" name="total_pendaki" class="form-control" value="<?=$total_pendaki?>" id="total_pendaki" placeholder="Jumlah Pendaki" readonly>
                   </div>
                 </div>
                 
                 <div class="form-group">
                   <label class="col-md-2 control-label">Total Harga</label>
                   <div class="col-md-10">
-                      <input type="text" name="" class="form-control" placeholder="Total Harga" value="" readonly>
+                      <input type="text" name="total_harga" class="form-control" placeholder="Total Harga" value="<?=$boking->harga*$total_pendaki?>" readonly>
                   </div>
                 </div>
                 

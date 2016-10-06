@@ -53,7 +53,8 @@
                               $datas->kuota
                             </a>";
                         }
-                      ?>                    </td>
+                      ?>                    
+                    </td>
                     <?php endif; endforeach;?>
                   </tr>
                   <?php endforeach; ?>

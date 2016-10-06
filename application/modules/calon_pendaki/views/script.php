@@ -20,14 +20,17 @@
 
 <script>
    $(document).ready(function(){
-     $.ajax({
-       url:"<?php echo base_url('calon_pendaki/boking/total_pendaki') ?> ",
-       type:"GET",
-       data:"",
-       dataType:"json",
-     })
-     .done(function(){
-       (#total_pendaki).attr("value")
-     });
+    $("#id_grup_pendaki").change(function(){   
+       var id_grup_pendaki = $("#id_grup_pendaki").val();
+       $.ajax({
+          url:"<?=base_url()?>calon_pendaki/boking/total_pendaki/"+id_grup_pendaki,
+          type:"GET",
+          dataType:"json",
+          success:function(data)
+          {
+            $("#total_pendaki").append(data);
+          } 
+        });
+    }); 
    });
 </script>
