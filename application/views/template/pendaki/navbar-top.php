@@ -2,7 +2,7 @@
   <nav class="navbar navbar-static-top">
     <div class="container">
       <div class="navbar-header">
-        <a href="<?=base_url()?>calon_pendaki/home" class="navbar-brand"><b>Admin</b>LTE</a>
+        <a href="<?=base_url()?>calon_pendaki/home" class="navbar-brand">Gunung Gede Pangrango</a>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
           <i class="fa fa-bars"></i>
         </button>
@@ -13,7 +13,7 @@
         <ul class="nav navbar-nav">
           <li><a href="<?=base_url()?>calon_pendaki/info_gunung">Boking</a></li>
           <li><a href="<?=base_url()?>calon_pendaki/grup">Grup</a></li>
-          <li><a href="<?=base_url()?>calon_pendaki/bayar">Bayar</a></li>
+          <li><a href="<?=base_url()?>calon_pendaki/pembayaran">Pembayaran</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?=$this->session->userdata('username')?> <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">

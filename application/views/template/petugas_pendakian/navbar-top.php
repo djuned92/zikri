@@ -2,7 +2,7 @@
   <nav class="navbar navbar-static-top">
     <div class="container">
       <div class="navbar-header">
-        <a href="<?=base_url()?>kepala_balai/home" class="navbar-brand">Gunung Gede Pangrango</a>
+        <a href="<?=base_url()?>petugas_pendakian/home" class="navbar-brand">Gunung Gede Pangrango</a>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
           <i class="fa fa-bars"></i>
         </button>
@@ -11,7 +11,16 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="<?=base_url()?>kepala_balai/info_gunung">Info Gunung</a></li>
+          <li><a href="<?=base_url()?>petugas_pendakian/info_gunung">Info Gunung</a></li>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Validasi Boking <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="<?=base_url()?>petugas_pendakian/validasi_boking/jalur_cibodas">Jalur Cibodas</a></li>
+                <li><a href="<?=base_url()?>petugas_pendakian/validasi_boking/jalur_putri">Jalur Putri</a></li>
+                <li><a href="<?=base_url()?>petugas_pendakian/validasi_boking/jalur_salabintana">Jalur Salabintana</a></li>
+              </ul>
+            </li>
+          <li><a href="<?=base_url()?>petugas_pendakian/validasi_pembayaran">Validasi Pembayaran</a></li>
          <!--  <li><a href="<?=base_url()?>kepala_balai/boking">Boking</a></li>
           <li><a href="<?=base_url()?>kepala_balai/bayar">Bayar</a></li> -->
         </ul>
@@ -27,7 +36,7 @@
               <!-- The user image in the navbar-->
               <img src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Kepala Balai</span>
+              <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -35,7 +44,8 @@
                 <img src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Kepala Balai
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
                 </p>
               </li>
               <!-- Menu Body -->
