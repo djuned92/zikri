@@ -8,10 +8,10 @@ class Lihat_berita extends CI_Controller {
 		parent::__construct();
 		$this->load->model('berita_model', 'berita');
 
-		// if ($this->session->userdata('level_user') != 'petugas_pendakian')
-		// {
-		// 	redirect('auth/users');
-		// }
+		if ($this->session->userdata('level_user') != 'petugas_pendakian')
+		{
+			redirect('auth/users');
+		}
 	}
 
 	public function index($id)

@@ -14,6 +14,18 @@ class Grup_pendaki_model extends CI_Model {
 		return $q->result();
 	}
 
+	// id by user login
+	public function email_by_id($id)
+	{
+		$q = $this->db->select('gp.*, u.id_user, u.username')
+						->from('grup_pendaki as gp')
+						->join('user as u','u.id_user = gp.id_user')
+						->where('u.id_user', $id)
+						->group_by('gp.id_user')
+						->get();
+		return $q->result();
+	}
+
 	public function add_grup_pendaki($grup_pendaki)
 	{
 		$this->db->insert('grup_pendaki',$grup_pendaki);

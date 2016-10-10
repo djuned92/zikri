@@ -1,11 +1,11 @@
-<!-- modal detail grup pendaki -->
-<?php foreach($grup_pendaki as $r): ?>
-<div class="modal fade" id="detailBoking<?=$r->id_grup_pendaki?>" tabindex="-1" role="dialog">
+<!-- modal detail pembayaran -->
+<?php foreach($pembayaran as $r): ?>
+<div class="modal fade" id="detailPembayaran<?=$r->id_pembayaran?>" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Detail Grup Pendaki</h4>
+                <h4 class="modal-title">Detail Pembayaran</h4>
             </div>
 
             <div class="modal-body">
@@ -15,20 +15,28 @@
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
-                                    <td colspan="1">Nama Grup</td>
+                                    <td colspan="1">Atas Nama</td>
+                                    <td colspan="2"><?=$r->nama?></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1">Grup</td>
                                     <td colspan="2"><?=$r->nama_grup?></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="1">Alamat</td>
-                                    <td colspan="2"><?=$r->alamat?></td>
+                                    <td colspan="1">Jalur & Tanggal Pendakian</td>
+                                    <td colspan="2"><?=$r->nama_jalur?> & <?=$r->tanggal_pendakian?></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="1">Provinsi</td>
-                                    <td colspan="2"><?=$r->provinsi_nama?></td>
+                                    <td colspan="1">Nominal Transfer</td>
+                                    <td colspan="2"><?=$r->nominal_transfer?></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="1">Kota</td>
-                                    <td colspan="2"><?=$r->kokab_nama?></td>
+                                    <td colspan="1">Bukti Transfer</td>
+                                    <td colspan="2"><img class="img-rounded" src="<?=base_url()?>assets/img/<?=$r->bukti_transfer?>" style="widht:400px; height: 300px;"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1">Yang Harus Dibayar</td>
+                                    <td colspan="2"><?=$r->total_harga?></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -72,10 +80,9 @@
     </div>
 </div>
 <?php endforeach; ?>
-<!-- end modal detail grup pendaki -->
 
-<!-- modal boking valid -->
-<?php foreach($boking as $r): ?>
+<!-- modal pembayaran valid -->
+<?php foreach($pembayaran as $r): ?>
 <div class="modal fade" id="bokingValid<?=$r->id_boking?>" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -108,40 +115,3 @@
     </div>
 </div>
 <?php endforeach; ?>
-<!-- end modal boking valid -->
-
-<!-- modal boking not valid -->
-<?php foreach($boking as $r): ?>
-<div class="modal fade" id="bokingNotValid<?=$r->id_boking?>" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Boking Tidak Valid</h4>
-            </div>
-
-            <form action="<?=base_url()?>petugas_pendakian/validasi_boking/boking_not_valid/<?=$r->id_boking?>" class="form-horizontal" method="POST">
-                <div class="modal-body">
-                    <h4>Atas nama grup <strong><?=$r->nama_grup?></strong> boking tidak valid</h4>
-                </div>
-                
-                <!-- input hidden email -->
-                <input type="hidden" name="username" value="<?=$r->username?>">
-
-                <!-- input hidden kode boking -->
-                <input type="hidden" name="kode_boking" value="<?=$r->kode_boking?>">
-
-                 <!-- uri segment -->
-                <input type="hidden" name="uri_segment" value="<?=$this->uri->segment(3)?>">
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-                    <button type="submit" class="btn btn-primary">Ya</button>
-                </div>
-
-            </form>
-        </div>
-    </div>
-</div>
-<?php endforeach; ?>
-<!-- end modal boking not valid

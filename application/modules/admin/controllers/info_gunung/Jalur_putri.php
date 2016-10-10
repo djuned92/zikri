@@ -8,10 +8,10 @@ class Jalur_putri extends CI_Controller {
 		parent::__construct();
 		$this->load->model('jalur_putri_model','jalur_putri');
 
-		// if ($this->session->userdata('level_user') != 'admin')
-		// {
-		// 	redirect('auth/users');
-		// }
+		if ($this->session->userdata('level_user') != 'admin')
+		{
+			redirect('auth/users');
+		}
 	}
 
 	public function index()

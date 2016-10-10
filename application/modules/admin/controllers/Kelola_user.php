@@ -12,10 +12,11 @@ class Kelola_user extends CI_Controller {
 		$this->load->model('jabatan_model','jabatan');
 		$this->load->model('provinsi_model','provinsi');
 		$this->load->model('kota_model','kota');
-		// if ($this->session->userdata('level_user') != 'admin')
-		// {
-		// 	redirect('auth/users');
-		// }
+		
+		if ($this->session->userdata('level_user') != 'admin')
+		{
+			redirect('auth/users');
+		}
 	}
 
 	public function index()

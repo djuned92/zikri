@@ -8,10 +8,10 @@ class Jalur_salabintana extends CI_Controller {
 		parent::__construct();
 		$this->load->model('jalur_salabintana_model','jalur_salabintana');
 
-		// if ($this->session->userdata('level_user') != 'admin')
-		// {
-		// 	redirect('auth/users');
-		// }
+		if ($this->session->userdata('level_user') != 'admin')
+		{
+			redirect('auth/users');
+		}
 	}
 
 	public function index()

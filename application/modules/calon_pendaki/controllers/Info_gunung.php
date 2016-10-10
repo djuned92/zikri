@@ -12,10 +12,10 @@ class Info_gunung extends CI_Controller {
 			'kota_model'		=> 'kota'
 			));
 
-		// if ($this->session->userdata('level_user') != 'calon_pendaki')
-		// {
-		// 	redirect('auth/users');
-		// }
+		if ($this->session->userdata('level_user') != 'calon_pendaki')
+		{
+			redirect('auth/users');
+		}
 	}
 
 	public function index()

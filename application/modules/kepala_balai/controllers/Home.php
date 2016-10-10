@@ -9,10 +9,10 @@ class Home extends CI_Controller {
     
     $this->load->model('berita_model','berita');
   
-    // if ($this->session->userdata('level_user') != 'calon_pendaki')
-    // {
-    //  redirect('auth/users');
-    // }
+    if ($this->session->userdata('level_user') != 'kepala_balai')
+    {
+     redirect('auth/users');
+    }
   }
 
   public function index()
@@ -24,4 +24,4 @@ class Home extends CI_Controller {
 }
 
 /* End of file Home.php */
-/* Location: ./application/modules/calon_pendaki/controllers/Home.php */
+/* Location: ./application/modules/kepala_balai/controllers/Home.php */

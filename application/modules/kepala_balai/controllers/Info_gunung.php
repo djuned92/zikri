@@ -12,10 +12,10 @@ class Info_gunung extends CI_Controller {
       'kota_model'    => 'kota'
       ));
 
-    // if ($this->session->userdata('level_user') != 'calon_pendaki')
-    // {
-    //  redirect('auth/users');
-    // }
+    if ($this->session->userdata('level_user') != 'kepala_balai')
+    {
+     redirect('auth/users');
+    }
   }
 
   public function index()
@@ -29,4 +29,4 @@ class Info_gunung extends CI_Controller {
 }
 
 /* End of file Info_gunung.php */
-/* Location: ./application/modules/calon_pendaki/controllers/Info_gunung.php */
+/* Location: ./application/modules/kepala_balai/controllers/Info_gunung.php */

@@ -15,7 +15,7 @@
             <div class="col-md-12">
               <?php foreach($berita as $r):?>
                 <div class="row">
-                  <a href="<?=base_url()?>calon_pendaki/lihat_berita/index/<?=$r->id_berita?>" style="color:#000000;">
+                  <a href="<?=base_url()?>kepala_balai/lihat_berita/index/<?=$r->id_berita?>" style="color:#000000;">
                     <div class="col-md-2">
                       <img src="<?=base_url()?>assets/img/<?=$r->gambar?>" class="img-responsive img-rounded" alt="Responsive image" style="widht:100px; height:100px;">     
                     </div>

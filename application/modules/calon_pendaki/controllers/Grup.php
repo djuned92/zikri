@@ -11,10 +11,10 @@ class Grup extends CI_Controller {
 		$this->load->model('provinsi_model','provinsi');
 		$this->load->model('kota_model','kota');
 
-		// if ($this->session->userdata('level_user') != 'calon_pendaki')
-		// {
-		// 	redirect('auth/users');
-		// }
+		if ($this->session->userdata('level_user') != 'calon_pendaki')
+		{
+			redirect('auth/users');
+		}
 	}
 
 	public function index()

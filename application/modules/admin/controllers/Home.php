@@ -7,10 +7,10 @@ class Home extends CI_Controller {
 	{
 		parent::__construct();
 
-		// if ($this->session->userdata('level_user') != 'admin')
-		// {
-		// 	redirect('auth/users');
-		// }
+		if ($this->session->userdata('level_user') != 'admin')
+		{
+			redirect('auth/users');
+		}
 	}
 
 	public function index()

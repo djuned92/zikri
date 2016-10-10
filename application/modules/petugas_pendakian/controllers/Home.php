@@ -9,10 +9,10 @@ class Home extends CI_Controller {
 
 		$this->load->model('berita_model','berita');
 
-		// if ($this->session->userdata('level_user') != 'petugas_pendakian')
-		// {
-		//  redirect('auth/users');
-		// }
+		if ($this->session->userdata('level_user') != 'petugas_pendakian')
+		{
+		 redirect('auth/users');
+		}
 	}
 
 	public function index()

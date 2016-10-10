@@ -47,7 +47,7 @@ class Users extends CI_Controller {
 					'id_user'		=> $valid_user->id_user,
 					'username'		=> $valid_user->username,
 					'level_user'	=> $valid_user->level_user,
-					'status_user'	=> $valid_user->status,
+					'status_user'	=> $valid_user->status_user,
 					'status_login'	=> 'login'
 					);
 				$this->session->set_userdata($data);
@@ -60,7 +60,7 @@ class Users extends CI_Controller {
 					case ($valid_user->level_user == 'calon_pendaki' && $valid_user->status_user == 'Aktif'):
 						redirect('calon_pendaki/home');
 						break;
-					case ($valid_user->level_user == 'petugas_perijinan' && $valid_user->status_user == 'Aktif'):
+					case ($valid_user->level_user == 'petugas_pendakian' && $valid_user->status_user == 'Aktif'):
 						redirect('petugas_pendakian/home');
 						break;
 					case ($valid_user->level_user == 'kepala_balai' && $valid_user->status_user == 'Aktif'):

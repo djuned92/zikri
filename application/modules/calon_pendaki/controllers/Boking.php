@@ -12,10 +12,10 @@ class Boking extends CI_Controller {
 			'jadwal_pendakian_model' => 'jadwal_pendakian'
 			));
 
-		// if ($this->session->userdata('level_user') != 'calon_pendaki')
-		// {
-		// 	redirect('auth/users');
-		// }
+		if ($this->session->userdata('level_user') != 'calon_pendaki')
+		{
+			redirect('auth/users');
+		}
 	}
 
 	public function index($id_jadwal_pendakian = NULL)

@@ -8,10 +8,10 @@ class Jalur_cibodas extends CI_Controller {
 		parent::__construct();
 		$this->load->model('jalur_cibodas_model','jalur_cibodas');
 
-		// if ($this->session->userdata('level_user') != 'admin')
-		// {
-		// 	redirect('auth/users');
-		// }
+		if ($this->session->userdata('level_user') != 'admin')
+		{
+			redirect('auth/users');
+		}
 	}
 
 	public function index()

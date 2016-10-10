@@ -9,10 +9,10 @@ class Pembayaran extends CI_Controller {
 		$this->load->model('boking_model','boking');
 		$this->load->model('pembayaran_model','pembayaran');
 
-		// if ($this->session->userdata('level_user') != 'calon_pendaki')
-		// {
-		// 	redirect('auth/users');
-		// }
+		if ($this->session->userdata('level_user') != 'calon_pendaki')
+		{
+			redirect('auth/users');
+		}
 	}
 
 	public function index()
