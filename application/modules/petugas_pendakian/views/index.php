@@ -3,7 +3,7 @@
     
     <section class="content-header">
       <h1>
-        Berita Gunung Gede
+        Berita Gunung Gede Pangrango
       </h1>
     </section>
 

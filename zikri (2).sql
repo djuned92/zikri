@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2016 at 12:56 PM
+-- Generation Time: Oct 11, 2016 at 07:35 AM
 -- Server version: 5.5.39
 -- PHP Version: 5.4.31
 
@@ -37,20 +37,21 @@ CREATE TABLE IF NOT EXISTS `anggota` (
   `no_telp` int(12) NOT NULL,
   `level_anggota` enum('Anggota','Ketua') NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `anggota`
 --
 
 INSERT INTO `anggota` (`id_anggota`, `id_grup_pendaki`, `kota_id`, `no_identitas`, `nama_anggota`, `alamat`, `email`, `no_telp`, `level_anggota`, `created_at`) VALUES
-(1, 2, 87, 897987897, 'Zikri', 'Tambun', 'zikri@gmail.com', 989898, 'Anggota', '2016-09-22 08:19:46'),
-(2, 2, 66, 987987, 'Aldi', 'Kota wisata', 'aldi@gmailcom', 9087132, 'Anggota', '2016-09-22 08:19:49'),
-(3, 6, 18, 111, 'nama1', 'alamat1', '1@gmail.com', 111, 'Ketua', '2016-09-22 08:47:18'),
-(4, 6, 40, 222, 'nama2', 'alamat2', '2@gmail.com', 222, 'Anggota', '2016-09-22 08:47:18'),
-(5, 7, 7, 12345, 'nama1', 'asd', 'dd@gmail.com.111', 513513, 'Ketua', '2016-09-23 05:49:59'),
-(6, 7, 20, 1230897123, 'ksljh', 'lskdjf;las', '44@gmail.com', 29840984, 'Anggota', '2016-09-23 05:49:59'),
-(7, 6, 123, 1234, 'skjhdg', 'las', 'skjhdf@gmail.com', 1235, 'Anggota', '2016-09-23 07:53:21');
+(10, 3, 51, 2147483647, 'Ahmad Djunaedi', 'Bekasi', 'ahmad@gmail.com', 2147483647, 'Ketua', '2016-10-06 18:05:08'),
+(11, 3, 47, 2147483647, 'Zikri', 'Kp. Utan', 'zikri@gmail.com', 909090, 'Anggota', '2016-10-06 18:05:08'),
+(12, 4, 77, 999999, 'Bedul', 'Condet', 'bedul@gmail.com', 98989, 'Ketua', '2016-10-06 18:06:25'),
+(13, 4, 32, 989789, 'Simon', 'Kp. Canggih', 'simon@gmail.com', 983240, 'Anggota', '2016-10-06 18:06:25'),
+(14, 5, 59, 981729, 'budi', 'Gang Kayu', 'budi@yahoo.com', 1029, 'Ketua', '2016-10-06 18:09:15'),
+(15, 5, 23, 102983097, 'Tika', 'Kampungan Sawah', 'tika@rocketmail.com', 2147483647, 'Anggota', '2016-10-06 18:09:15'),
+(16, 6, 163, 2147483647, 'wiro', 'jl. gandaria 1 rt 003 / rw 010', 'wira_143@gmail.com', 2147483647, 'Ketua', '2016-10-11 04:19:31'),
+(17, 6, 72, 2147483647, 'wiwik', 'jl. rawa bebek rt 09/rw002', 'gagagag@hotmail.com', 2147483647, 'Anggota', '2016-10-11 04:19:31');
 
 -- --------------------------------------------------------
 
@@ -60,7 +61,7 @@ INSERT INTO `anggota` (`id_anggota`, `id_grup_pendaki`, `kota_id`, `no_identitas
 
 CREATE TABLE IF NOT EXISTS `berita` (
 `id_berita` int(3) NOT NULL,
-  `judul` varchar(25) NOT NULL,
+  `judul` varchar(50) NOT NULL,
   `isi` text NOT NULL,
   `gambar` varchar(25) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -71,11 +72,9 @@ CREATE TABLE IF NOT EXISTS `berita` (
 --
 
 INSERT INTO `berita` (`id_berita`, `judul`, `isi`, `gambar`, `created_at`) VALUES
-(2, 'Ini judul berita', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br />\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br />\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br />\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br />\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br />\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lighthouse.jpg', '2016-09-16 06:34:41'),
-(3, 'Second news', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br />\r\n	        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br />\r\n	        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br />\r\n	        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br />\r\n	        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br />\r\n	        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Jellyfish.jpg', '2016-09-16 06:34:17'),
 (4, 'Yeah update', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br><br />\r\n	        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br><br />\r\n	        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br><br />\r\n	        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br><br />\r\n	        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br><br />\r\n	        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Chrysanthemum.jpg', '2016-09-15 05:06:17'),
 (5, 'Yuhu', '<b>Lorem ipsum dolor sit amet</b>, consectetur adipisicing elit, sed do eiusmod&nbsp;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&nbsp;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&nbsp;consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&nbsp;cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&nbsp;proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Penguins.jpg', '2016-09-15 05:05:57'),
-(6, 'update lagi aaa', '<p><b><i><u><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</small></u></i></b><br><b><i><u><small>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</small></u></i></b><br><b><i><u><small>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</small></u></i></b><br><b><i><u><small>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</small></u></i></b><br><b><i><u><small>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</small></u></i></b><br><b><i><u><small>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</small></u></i></b><br></p>', 'Koala.jpg', '2016-09-21 09:38:18');
+(6, 'update lagi ', '<p><b><i><u><small></small></u></i></b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&nbsp;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&nbsp;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&nbsp;consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&nbsp;cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&nbsp;proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<b><i><u><small></small></u></i></b><br></p>', 'Koala.jpg', '2016-09-28 11:00:34');
 
 -- --------------------------------------------------------
 
@@ -85,21 +84,24 @@ INSERT INTO `berita` (`id_berita`, `judul`, `isi`, `gambar`, `created_at`) VALUE
 
 CREATE TABLE IF NOT EXISTS `boking` (
 `id_boking` int(3) NOT NULL,
+  `kode_boking` varchar(25) NOT NULL,
   `id_jadwal_pendakian` int(3) NOT NULL,
   `id_grup_pendaki` int(3) NOT NULL,
+  `total_pendaki` int(3) NOT NULL,
   `tgl_boking` date NOT NULL,
+  `total_harga` int(11) NOT NULL,
   `status` varchar(25) NOT NULL,
   `create_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `boking`
 --
 
-INSERT INTO `boking` (`id_boking`, `id_jadwal_pendakian`, `id_grup_pendaki`, `tgl_boking`, `status`, `create_at`) VALUES
-(27, 9, 0, '2004-12-31', 'Pending', '2016-09-21 06:53:08'),
-(28, 9, 2, '2016-11-18', 'Pending', '2016-09-23 07:26:25'),
-(29, 9, 6, '2016-09-30', 'Pending', '2016-09-23 11:41:00');
+INSERT INTO `boking` (`id_boking`, `kode_boking`, `id_jadwal_pendakian`, `id_grup_pendaki`, `total_pendaki`, `tgl_boking`, `total_harga`, `status`, `create_at`) VALUES
+(7, 'S-NgQOI5', 9, 4, 3, '2016-10-29', 10000, 'Boking Valid', '2016-10-06 18:15:49'),
+(8, 'C-Q9Oylz', 1, 5, 3, '2016-10-27', 10000, 'Boking Valid', '2016-10-06 18:15:23'),
+(9, 'S-xFU8Zk', 9, 6, 3, '2016-11-10', 10000, 'Boking Valid', '2016-10-11 04:24:26');
 
 -- --------------------------------------------------------
 
@@ -114,17 +116,17 @@ CREATE TABLE IF NOT EXISTS `grup_pendaki` (
   `nama_grup` varchar(30) NOT NULL,
   `alamat` varchar(50) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `grup_pendaki`
 --
 
 INSERT INTO `grup_pendaki` (`id_grup_pendaki`, `id_user`, `kota_id`, `nama_grup`, `alamat`, `created_at`) VALUES
-(1, 12, 55, 'Acak Adul', 'Rawa bening gg. bebek', '2016-09-22 05:30:57'),
-(2, 12, 88, '404notfound', 'webpage', '2016-09-22 05:35:17'),
-(6, 12, 44, 'Wara wiri', 'Bekasi', '2016-09-22 08:47:18'),
-(7, 13, 44, 'iy iya', 'Bekasi', '2016-09-23 05:49:59');
+(3, 12, 44, '404 Not Found', 'Bekasi', '2016-10-06 18:05:08'),
+(4, 12, 44, 'Wara wiri', 'Bekasi', '2016-10-06 18:06:25'),
+(5, 13, 44, 'Ajag ijig', 'Bekasi', '2016-10-06 18:09:15'),
+(6, 14, 44, 'jaya baya', 'Bekasi', '2016-10-11 04:19:31');
 
 -- --------------------------------------------------------
 
@@ -134,15 +136,16 @@ INSERT INTO `grup_pendaki` (`id_grup_pendaki`, `id_user`, `kota_id`, `nama_grup`
 
 CREATE TABLE IF NOT EXISTS `jabatan` (
   `id_jabatan` int(3) NOT NULL,
-  `nama_jabatan` varchar(25) NOT NULL
+  `nama_jabatan` varchar(25) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `jabatan`
 --
 
-INSERT INTO `jabatan` (`id_jabatan`, `nama_jabatan`) VALUES
-(1, 'Petugas Perijinan');
+INSERT INTO `jabatan` (`id_jabatan`, `nama_jabatan`, `created_at`) VALUES
+(1, 'Petugas Perijinan', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -183,6 +186,7 @@ INSERT INTO `jadwal_pendakian` (`id_jadwal_pendakian`, `id_jalur_pendakian`, `ku
 
 CREATE TABLE IF NOT EXISTS `jalur_pendakian` (
 `id_jalur_pendakian` int(3) NOT NULL,
+  `kode_jalur` varchar(1) NOT NULL,
   `nama_jalur` enum('Jalur Cibodas','Jalur Putri','Jalur Salabintana') NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
@@ -190,10 +194,21 @@ CREATE TABLE IF NOT EXISTS `jalur_pendakian` (
 -- Dumping data for table `jalur_pendakian`
 --
 
-INSERT INTO `jalur_pendakian` (`id_jalur_pendakian`, `nama_jalur`) VALUES
-(1, 'Jalur Cibodas'),
-(2, 'Jalur Putri'),
-(3, 'Jalur Salabintana');
+INSERT INTO `jalur_pendakian` (`id_jalur_pendakian`, `kode_jalur`, `nama_jalur`) VALUES
+(1, 'C', 'Jalur Cibodas'),
+(2, 'P', 'Jalur Putri'),
+(3, 'S', 'Jalur Salabintana');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `level_user`
+--
+
+CREATE TABLE IF NOT EXISTS `level_user` (
+  `id_level_user` int(3) NOT NULL,
+  `nama_level` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -794,17 +809,43 @@ INSERT INTO `pegawai` (`id_pegawai`, `id_jabatan`, `id_user`, `kota_id`, `nama`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pembayaran`
+--
+
+CREATE TABLE IF NOT EXISTS `pembayaran` (
+`id_pembayaran` int(3) NOT NULL,
+  `id_boking` int(3) NOT NULL,
+  `nama` varchar(25) NOT NULL,
+  `tanggal_bayar` date NOT NULL,
+  `nominal_transfer` int(11) NOT NULL,
+  `bukti_transfer` varchar(50) NOT NULL,
+  `status` enum('Pending','Valid','Tidak Valid') NOT NULL,
+  `create_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `pembayaran`
+--
+
+INSERT INTO `pembayaran` (`id_pembayaran`, `id_boking`, `nama`, `tanggal_bayar`, `nominal_transfer`, `bukti_transfer`, `status`, `create_at`) VALUES
+(2, 7, 'Budi', '2014-12-31', 1000000, 'no_profile1.png', 'Pending', '2016-10-06 18:19:51'),
+(3, 8, 'Ajag ijig', '2016-09-23', 90009, 'no_profile2.png', 'Pending', '2016-10-06 18:21:21'),
+(4, 9, 'wira sodikin', '2016-12-10', 150000, 'Desert2.jpg', 'Pending', '2016-10-11 04:29:03');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
 `id_user` int(3) NOT NULL,
-  `level_user` enum('admin','calon_pendaki','petugas_perijinan','kepala_balai') NOT NULL,
+  `level_user` enum('admin','calon_pendaki','petugas_pendakian','kepala_balai') NOT NULL,
   `username` varchar(25) NOT NULL,
   `password` varchar(64) NOT NULL,
   `status_user` enum('Aktif','Tidak Aktif') NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `user`
@@ -812,10 +853,11 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id_user`, `level_user`, `username`, `password`, `status_user`, `created_at`) VALUES
 (1, 'admin', 'admin', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Aktif', '0000-00-00 00:00:00'),
-(10, 'petugas_perijinan', 'b@baaa.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Aktif', '2016-09-14 07:20:15'),
-(11, 'admin', 'admin@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Aktif', '2016-09-16 05:11:34'),
+(10, 'petugas_pendakian', 'petugas@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Aktif', '2016-10-06 18:14:44'),
+(11, 'kepala_balai', 'kepala_balai', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Aktif', '2016-10-10 07:20:13'),
 (12, 'calon_pendaki', 'pendaki@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Aktif', '2016-09-21 17:11:08'),
-(13, 'calon_pendaki', 'a@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Aktif', '2016-09-23 05:48:46');
+(13, 'calon_pendaki', 'atl.ryuzaki@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Aktif', '2016-09-28 12:13:41'),
+(14, 'calon_pendaki', 'marzekal.123@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', 'Aktif', '2016-10-11 04:03:41');
 
 --
 -- Indexes for dumped tables
@@ -876,6 +918,12 @@ ALTER TABLE `pegawai`
  ADD PRIMARY KEY (`id_pegawai`);
 
 --
+-- Indexes for table `pembayaran`
+--
+ALTER TABLE `pembayaran`
+ ADD PRIMARY KEY (`id_pembayaran`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -889,7 +937,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `anggota`
 --
 ALTER TABLE `anggota`
-MODIFY `id_anggota` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `id_anggota` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `berita`
 --
@@ -899,12 +947,12 @@ MODIFY `id_berita` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 -- AUTO_INCREMENT for table `boking`
 --
 ALTER TABLE `boking`
-MODIFY `id_boking` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
+MODIFY `id_boking` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `grup_pendaki`
 --
 ALTER TABLE `grup_pendaki`
-MODIFY `id_grup_pendaki` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `id_grup_pendaki` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `jadwal_pendakian`
 --
@@ -926,10 +974,15 @@ MODIFY `kota_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=503;
 ALTER TABLE `master_provinsi`
 MODIFY `provinsi_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=35;
 --
+-- AUTO_INCREMENT for table `pembayaran`
+--
+ALTER TABLE `pembayaran`
+MODIFY `id_pembayaran` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- Constraints for dumped tables
 --
