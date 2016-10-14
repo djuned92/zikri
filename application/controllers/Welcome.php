@@ -28,8 +28,14 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 
-	public function test()
+	public function count()
 	{
-		$this->template->admin('home');
+		$this->load->model('total_pendaki_model','total_pendaki');
+
+		$total_pendaki = $this->total_pendaki->count_total_pendaki();
+		$kuota = $this->total_pendaki->count_jadwal_pendakian();
+		echo $kuota - $total_pendaki;
+
 	}
+
 }
