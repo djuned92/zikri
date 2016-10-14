@@ -87,7 +87,7 @@ class Validasi_boking extends CI_Controller {
 				$uri = $this->input->post('uri_segment');
 
 				$this->boking->update_boking($id_boking, $data);
-				$this->session->set_flashdata('boking','Boking telah berhasil divalidasi');
+				$this->session->set_flashdata('boking','Status boking berhasil diperbaharui');
 				redirect('petugas_pendakian/validasi_boking/'.$uri);
 			}
 			else
@@ -142,7 +142,7 @@ class Validasi_boking extends CI_Controller {
 				$uri = $this->input->post('uri_segment');
 
 				$this->boking->update_boking($id_boking, $data);
-				$this->session->set_flashdata('boking','Boking telah berhasil divalidasi');
+				$this->session->set_flashdata('boking','Status boking berhasil diperbaharui');
 				redirect('petugas_pendakian/validasi_boking/'.$uri);
 			}
 			else

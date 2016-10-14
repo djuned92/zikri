@@ -18,7 +18,7 @@
                                     <td colspan="1">Nama Grup</td>
                                     <td colspan="2"><?=$r->nama_grup?></td>
                                 </tr>
-                                <tr>
+                              <!--   <tr>
                                     <td colspan="1">Alamat</td>
                                     <td colspan="2"><?=$r->alamat?></td>
                                 </tr>
@@ -29,7 +29,7 @@
                                 <tr>
                                     <td colspan="1">Kota</td>
                                     <td colspan="2"><?=$r->kokab_nama?></td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
 

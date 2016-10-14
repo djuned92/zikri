@@ -83,27 +83,49 @@
 
 <!-- modal pembayaran valid -->
 <?php foreach($pembayaran as $r): ?>
-<div class="modal fade" id="bokingValid<?=$r->id_boking?>" tabindex="-1" role="dialog">
+<div class="modal fade" id="pembayaranValid<?=$r->id_pembayaran?>" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Boking Valid</h4>
+                <h4 class="modal-title">Pembayaran Valid</h4>
             </div>
 
-            <form action="<?=base_url()?>petugas_pendakian/validasi_boking/boking_valid/<?=$r->id_boking?>" class="form-horizontal" method="POST">
+            <form action="<?=base_url()?>petugas_pendakian/validasi_pembayaran/pembayaran_valid/<?=$r->id_pembayaran?>" class="form-horizontal" method="POST">
                 <div class="modal-body">
-                    <h4>Atas nama grup <strong><?=$r->nama_grup?></strong> boking valid</h4>
+                    <h4>Atas nama grup <strong><?=$r->nama_grup?></strong> pembayaran valid</h4>
                 </div>
-                
                 <!-- input hidden email = username -->
                 <input type="hidden" name="username" value="<?=$r->username?>">
 
-                <!-- input hidden kode boking -->
-                <input type="hidden" name="kode_boking" value="<?=$r->kode_boking?>">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
+                    <button type="submit" class="btn btn-primary">Ya</button>
+                </div>
 
-                <!-- uri segment -->
-                <input type="hidden" name="uri_segment" value="<?=$this->uri->segment(3)?>">
+            </form>
+        </div>
+    </div>
+</div>
+<?php endforeach; ?>
+
+<!-- pembayaran not valid -->
+<?php foreach($pembayaran as $r): ?>
+<div class="modal fade" id="pembayaranNotValid<?=$r->id_pembayaran?>" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Pembayaran Tidak Valid</h4>
+            </div>
+
+            <form action="<?=base_url()?>petugas_pendakian/validasi_pembayaran/pembayaran_not_valid/<?=$r->id_pembayaran?>" class="form-horizontal" method="POST">
+                <div class="modal-body">
+                    <h4>Atas nama grup <strong><?=$r->nama_grup?></strong> pembayaran tidak valid</h4>
+                </div>
+
+                <!-- input hidden email = username -->
+                <input type="hidden" name="username" value="<?=$r->username?>">
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
