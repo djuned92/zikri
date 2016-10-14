@@ -3,7 +3,7 @@
     
     <section class="content-header" style="padding-top:0px;">
       <h3>
-        Info Gunung Gede
+        Info Gunung Gede Pangrango
       </h3>
     </section>
 
@@ -41,16 +41,19 @@
                         if($datas->tanggal_pendakian == $r->tanggal_pendakian):
                     ?>
                     <td>
-                      <?php 
+                      <?php
+                        $this->load->model('count_model','count');
+                        $total_pendaki = $this->count->total_pendaki($datas->id_jadwal_pendakian); 
                         if($datas->status_jalur_pendakian != 'Aman')
                         {
                           echo $datas->status_jalur_pendakian;
                         }
                         else
                         {
+                          $kuota = $datas->kuota - $total_pendaki;
                           echo 
                             "<a href='boking/index/$datas->id_jadwal_pendakian'>
-                              $datas->kuota
+                              $kuota
                             </a>";
                         }
                       ?>                    

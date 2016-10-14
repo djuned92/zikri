@@ -5,6 +5,16 @@
       <h3>
         Grup Pendaki
       </h3>
+      <div class="row">
+        <div class="col-md-12">
+          <?php if($this->session->flashdata('add')):?>
+              <div class="alert alert-info">
+                  <a href="#" class="close" data-dismiss="alert">&times;</a>
+                  <strong><?php echo $this->session->flashdata('add'); ?></strong>
+              </div>
+          <?php endif; ?>
+        </div>
+      </div>
     </section>
 
     <!-- Main content -->

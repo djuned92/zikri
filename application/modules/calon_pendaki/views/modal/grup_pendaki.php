@@ -201,7 +201,7 @@
                             $anggota = $this->anggota->anggota_by_grup_id($r->id_grup_pendaki);
                             $i = 1;
                             foreach($anggota as $datas):
-                              if($r->id_grup_pendaki == $datas->id_grup_pendaki): 
+                              if($r->id_grup_pendaki == $datas->id_grup_pendaki && $datas->nama_anggota != NULL): 
                           ?>
                       			<tr>
                       				<td><?=$i++?></td>

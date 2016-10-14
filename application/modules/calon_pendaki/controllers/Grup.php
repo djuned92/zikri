@@ -43,9 +43,7 @@ class Grup extends CI_Controller {
 			// grup pendaki
 			$grup_pendaki = array(
 				'id_user'	=> $this->input->post('id_user'),
-				'kota_id'	=> '44',
-				'nama_grup'	=> $this->input->post('nama_grup'),
-				'alamat'	=> 'Bekasi'
+				'nama_grup'	=> $this->input->post('nama_grup')
 				);
 			$this->grup_pendaki->add_grup_pendaki($grup_pendaki);
 			$id_grup_pendaki = $this->db->insert_id();
@@ -66,7 +64,7 @@ class Grup extends CI_Controller {
 					);
 			}
 			$this->anggota->add_anggota($anggota);
-			$this->session->set_flashdata('add_grup_pendaki','Berhasil menambah grup pendaki');
+			$this->session->set_flashdata('add','Berhasil menambah grup pendaki');
 			redirect('calon_pendaki/grup');
 		}
 	}

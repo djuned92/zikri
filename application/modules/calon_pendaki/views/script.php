@@ -16,6 +16,15 @@
 <!-- chained provinsi kota -->
 <script>
    $('#select_kota').chained('#select_provinsi');
+   $('#select_kota1').chained('#select_provinsi1');
+   $('#select_kota2').chained('#select_provinsi2');
+   $('#select_kota3').chained('#select_provinsi3');
+   $('#select_kota4').chained('#select_provinsi4');
+   $('#select_kota5').chained('#select_provinsi5');
+   $('#select_kota6').chained('#select_provinsi6');
+   $('#select_kota7').chained('#select_provinsi7');
+   $('#select_kota8').chained('#select_provinsi8');
+   $('#select_kota8').chained('#select_provinsi8');
 </script>
 
 <script>

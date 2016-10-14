@@ -95,7 +95,8 @@ class Boking extends CI_Controller {
 			$id_jadwal_pendakian = $this->input->post('id_jadwal_pendakian');
 	
 			$this->boking->add_boking($boking);
-			$this->session->set_flashdata('success_boking','Boking telah berhasil silahkan cek email untuk mendapatkan informasi lebih lanjut');
+			// $this->session->set_flashdata('success_boking','Boking telah berhasil silahkan cek email untuk mendapatkan informasi lebih lanjut');
+			$this->session->set_flashdata('success_boking','Boking telah berhasil dilakukan, untuk info lebih lanjut kami akan segera mengirimkan email');
 			redirect('calon_pendaki/boking/index/'.$id_jadwal_pendakian);
 		}
 		else
