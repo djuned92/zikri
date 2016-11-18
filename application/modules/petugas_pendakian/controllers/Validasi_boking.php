@@ -18,6 +18,7 @@ class Validasi_boking extends CI_Controller {
 	public function index()
 	{
 		$data['boking'] = $this->boking->get_all();
+		$data['grup_pendaki'] = $this->pendaki->get_all();
 		$this->template->petugas_pendakian('validasi_boking','script', $data);
 	}
 

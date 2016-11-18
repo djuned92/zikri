@@ -13,6 +13,7 @@ class Pembayaran_model extends CI_Model {
 						->join('user as u','gp.id_user = u.id_user')
 						->join('jalur_pendakian as jp','jp.id_jalur_pendakian = jadwal.id_jalur_pendakian')
 						->where('b.status','Boking Valid')
+						->order_by('p.id_pembayaran','DESC')
 						->get();
 		return $q->result();
 	}

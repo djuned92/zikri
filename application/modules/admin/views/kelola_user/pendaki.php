@@ -14,8 +14,7 @@
                       <tr>
                         <th>#</th>
                         <th>Username</th>
-                        <th>Nama Grup</th>
-                        <th>Alamat</th>
+                        <!-- <th>Nama Grup</th> -->
                         <th>Status User</th>
                         <th>Aksi</th>
                       </tr>
@@ -25,21 +24,16 @@
                       <tr>
                         <td><?=$i++?></td>
                         <td><?=$r->username?></td>
-                        <td><?=$r->nama_grup?></td>
-                        <td><?=$r->alamat?></td>
+                        <!-- <td><?=$r->nama_grup?></td> -->
                         <td><?=$r->status_user?></td>
                         <td>
-                          <button class="btn btn-xs btn-warning" data-toggle="modal" data-target="#detailGrupPendaki<?=$r->id_grup_pendaki?>" data-placement="bottom" title="Detail <?=$r->nama_grup?>">
-                                         <i class="fa fa-eye"></i>
-                                      </button>
+                          <button class="btn btn-xs btn-warning" data-toggle="modal" data-target="#detailGrupPendaki<?=$r->id_user?>" data-placement="bottom" title="Detail <?=$r->nama_grup?>">
+                             <i class="fa fa-eye"></i>
+                          </button>
 
-                                      <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#updateGrupPendaki<?=$r->id_grup_pendaki?>" data-placement="bottom" title="Edit <?=$r->nama_grup?>">
-                                         <i class="fa fa-edit"></i>
-                                      </button>
-
-                                      <button class="btn btn-xs btn-danger" data-toggle="modal" data-target="#deleteGrupPendaki<?=$r->id_grup_pendaki?>" data-placement="bottom" title="Hapus <?=$r->nama_grup?>">
-                                          <i class="fa fa-trash-o"></i>
-                                      </button>
+                          <button class="btn btn-xs btn-danger" data-toggle="modal" data-target="#deleteGrupPendaki<?=$r->id_grup_pendaki?>" data-placement="bottom" title="Hapus <?=$r->nama_grup?>">
+                              <i class="fa fa-trash-o"></i>
+                          </button>
                         </td>
                       </tr>
                       <?php endforeach; ?>

@@ -20,10 +20,10 @@ class Pendaki extends CI_Controller {
 
   public function index()
   {
-    $data['jabatan'] = $this->jabatan->get_all();
-    $data['provinsi'] = $this->provinsi->get_all();
-    $data['kota'] = $this->kota->get_all();
-    $data['grup_pendaki'] = $this->pendaki->get_all();
+    // $data['jabatan'] = $this->jabatan->get_all();
+    // $data['provinsi'] = $this->provinsi->get_all();
+    // $data['kota'] = $this->kota->get_all();
+    $data['grup_pendaki'] = $this->pendaki->grup_pendaki();
     $this->template->admin('kelola_user/pendaki','script', $data);
   }
 
@@ -43,7 +43,7 @@ class Pendaki extends CI_Controller {
   {
     $this->users->delete_grup_pendaki($id);
     $this->session->set_flashdata('delete_grup_pendaki', 'Grup pendaki berhasil dihapus');
-    redirect('admin/kelola_user');  
+    redirect('admin/kelola_user/pendaki');  
   }
 
 }

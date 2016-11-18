@@ -14,23 +14,37 @@
           <div class="row">
             <div class="col-md-12">
 
+             <h4>Keterangan</h4>
+             <p>C = Jalur Cibodas || P = Jalur Putri</p>
+             <p>S = Jalur Salabintana || E = Erupsi</p>
+             <p>PB = Pembersihan Jalur</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box box-default">
+        <div class="box-body">
+          <div class="row">
+            <div class="col-md-12">
              <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                  <tr>
+                  <!-- <tr>
                     <th colspan="4"><div align="center">Info Kuota dan Status Jalur</div></th>
-                  </tr>
+                  </tr> -->
                   <tr>
                     <th>Tanggal</th>
-                    <th>Cibodas</th>
-                    <th>Putri</th>
-                    <th>Salabintana</th>
+                    <th>C</th>
+                    <th>P</th>
+                    <th>S</th>
                   </tr>
                 </thead>
                 <tbody>
                   <!-- foreach ke 1 ini group by tanggal -->
                   <?php foreach($tanggal_pendakian as $r): ?> 
                   <tr>
-                    <td><?=$r->tanggal_pendakian?></td>
+                    <td><?php $tanggal = date_create($r->tanggal_pendakian); echo date_format($tanggal,"d M Y");?></td>
                     
                     <!-- foreach ke 2 get kuota berdasarkan tanggal -->
                     <?php 
@@ -46,7 +60,18 @@
                         $total_pendaki = $this->count->total_pendaki($datas->id_jadwal_pendakian); 
                         if($datas->status_jalur_pendakian != 'Aman')
                         {
-                          echo $datas->status_jalur_pendakian;
+                          if ($datas->status_jalur_pendakian == 'Pembersihan Jalur')
+                          {
+                            echo "PB";
+                          }
+                          elseif($datas->status_jalur_pendakian == 'Erupsi')
+                          {
+                            echo "E";
+                          }
+                          else
+                          {
+                            echo "SOS";
+                          }
                         }
                         else
                         {

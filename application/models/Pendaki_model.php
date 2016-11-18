@@ -17,6 +17,18 @@ class Pendaki_model extends CI_Model {
 						->get();
 		return $q->result();
 	}
+
+	public function grup_pendaki()
+	{
+		$q = $this->db->select('gp.*,u.*')
+						->from('grup_pendaki as gp')
+						->join('user as u','u.id_user = gp.id_user')
+						->group_by('u.username')
+						->order_by('u.id_user','DESC')
+						->get();
+		return $q->result();
+
+	}
 	
 }
 

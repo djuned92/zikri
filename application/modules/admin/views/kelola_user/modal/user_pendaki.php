@@ -1,61 +1,38 @@
 <!-- modal detail grup pendaki -->
 <?php foreach($grup_pendaki as $r): ?>
-<div class="modal fade" id="detailGrupPendaki<?=$r->id_grup_pendaki?>" tabindex="-1" role="dialog">
+<div class="modal fade" id="detailGrupPendaki<?=$r->id_user?>" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Detail Grup Pendaki</h4>
+                <h4 class="modal-title">Grup Pendaki Username <?=$r->username?></h4>
             </div>
 
             <div class="modal-body">
                 <div class="row">
                 
                     <div class="col-md-12">
-                        <table class="table table-striped">
-                            <tbody>
-                                <tr>
-                                    <td colspan="1">Nama Grup</td>
-                                    <td colspan="2"><?=$r->nama_grup?></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="1">Alamat</td>
-                                    <td colspan="2"><?=$r->alamat?></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="1">Provinsi</td>
-                                    <td colspan="2"><?=$r->provinsi_nama?></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="1">Kota</td>
-                                    <td colspan="2"><?=$r->kokab_nama?></td>
-                                </tr>
-                            </tbody>
-                        </table>
 
                         <table class="table table-striped">
 	                        <thead>
 	                            <tr>
-	                                <th colspan="3">List Anggota</th>
-	                            </tr>
-	                            <tr>
 	                                <th>#</th>
-	                                <th>Nama</th>
-	                                <th>Level Anggota</th>
+	                                <th>Nama Grup</th>
+	                                <!-- <th>Jumlah Anggota</th> -->
 	                            </tr>
 	                        </thead>
 	                        <tbody>
 	                            <?php 
 	                            $i = 1;
-	                            $this->load->model('anggota_model','anggota');
-	                            $anggota = $this->anggota->anggota_by_grup_id($r->id_grup_pendaki); 
-	                            foreach($anggota as $datas):
-	                                if($datas->id_grup_pendaki == $r->id_grup_pendaki):
+	                            $this->load->model('grup_pendaki_model','grup_pendaki');
+	                            $grup = $this->grup_pendaki->grup_by_id($r->id_user); 
+	                            foreach($grup as $datas):
+	                                if($datas->id_user == $r->id_user):
 	                            ?>
 	                            <tr>
 	                                <td><?=$i++?></td>
-	                                <td><?=$datas->nama_anggota?></td>
-	                                <td><?=$datas->level_anggota?></td>
+	                                <td><?=$datas->nama_grup?></td>
+	                                <!-- <td><?=$datas->level_anggota?></td> -->
 	                            </tr>
 	                            <?php endif; endforeach;?>
 	                        </tbody>

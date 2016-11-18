@@ -9,9 +9,9 @@
 <script>
   $(function () {
     $("#example1").DataTable({
-    	"paging": false,
+    	"paging": true,
 		  "lengthChange": false,
-		  "searching": false,
+		  "searching": true,
 		  "ordering": true,
 		  "info": true,
 		  "autoWidth": false
@@ -23,5 +23,9 @@
 <!-- chained provinsi kota -->
 <script>
   $('#select_kota').chained('#select_provinsi');
+</script>
+
+<script>
+  $('#select_kota1').chained('#select_provinsi1');
 </script>
 

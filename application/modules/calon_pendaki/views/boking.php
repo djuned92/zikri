@@ -51,7 +51,7 @@
                       <select class="form-control" name="id_grup_pendaki" id="id_grup_pendaki" required>
                         <option value="">Pilih Grup</option>
                         <?php foreach($grup_pendaki as $r): ?>
-                        <option value="<?=$r->id_grup_pendaki?>"><?=$r->nama_grup?> (<?=$r->id_grup_pendaki?>)</option>
+                        <option value="<?=$r->id_grup_pendaki?>"><?=$r->nama_grup?></option>
                         <?php endforeach; ?>
                       </select>
                   </div>
@@ -65,7 +65,7 @@
                 <div class="form-group">
                   <label class="col-md-2 control-label">Jumlah Pendaki</label>
                   <div class="col-md-10">
-                      <input type="text" name="total_pendaki" class="form-control" value="3" id="total_pendaki" placeholder="Jumlah Pendaki" readonly> 
+                      <input type="text" name="total_pendaki" class="form-control" id="total_pendaki" placeholder="Jumlah Pendaki" readonly> 
                       <!-- value="<?=$total_pendaki?>" -->
                   </div>
                 </div>
@@ -73,7 +73,8 @@
                 <div class="form-group">
                   <label class="col-md-2 control-label">Total Harga</label>
                   <div class="col-md-10">
-                      <input type="text" name="total_harga" class="form-control" placeholder="Total Harga" value="10000" readonly>
+                      <input type="text" name="total_harga" class="form-control" placeholder="Total Harga" readonly>
+                      <input type="hidden" name="harga_satuan" class="form-control" placeholder="Total Harga" value="<?=$boking->harga?>" readonly>
                     <!-- value="<?=$boking->harga*$total_pendaki?>" -->
                   </div>
                 </div>

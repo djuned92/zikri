@@ -7,12 +7,12 @@
                 <h4 class="modal-title">Tambah User</h4>
             </div>
 
-            <form action="<?=base_url()?>admin/kelola_user/add" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
+            <form action="<?=base_url()?>admin/kelola_user/pegawai/add" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                 	
                   	<div class="form-group">
 			            <label class="col-sm-3 control-label">Level User</label>
-			            <div class="col-sm-3">
+			            <div class="col-sm-8">
 			                <select name="level_user" class="form-control" required>
 			                    <option value="">-- Pilih --</option>
 			                    <option value="admin">Admin</option>
@@ -186,12 +186,12 @@
                 <h4 class="modal-title">Edit User Pegawai</h4>
             </div>
 
-            <form action="<?=base_url()?>admin/kelola_user/update/<?=$r->id_user?>" class="form-horizontal" method="POST" enctype="multipart/form-data">
+            <form action="<?=base_url()?>admin/kelola_user/pegawai/update/<?=$r->id_user?>" class="form-horizontal" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                 	
                   	<div class="form-group">
 			            <label class="col-sm-3 control-label">Level User</label>
-			            <div class="col-sm-3">
+			            <div class="col-sm-8">
 			                <select name="level_user" class="form-control" required>
 			                    <option value="">-- Pilih --</option>
 			                    <option value="admin">Admin</option>
@@ -233,7 +233,8 @@
 			            <label class="col-sm-3 control-label">Jabatan</label>
 			            <div class="col-sm-8">
 			                <select name="id_jabatan" class="form-control" required>
-			                    <option value="<?=$r->id_jabatan?>"><?=$r->nama_jabatan?></option>
+			                    <option value="1">Petugas Perijinan Pendakian</option>
+			                    <option value="2">Kepala Balai Besar TNGGP</option>
 			                
 			                </select>
 			            </div>
@@ -256,8 +257,11 @@
                   	<div class="form-group">
 			            <label class="col-sm-3 control-label">Provinsi</label>
 			            <div class="col-sm-8">
-			                <select class="form-control"  id="select_provinsi" required>
+			                <select class="form-control"  id="select_provinsi1" required>
+					            <option value="#">- Pilih Provinsi - </option>
+					            <?php foreach ($provinsi as $r):?>
 					            <option value="<?=$r->provinsi_id?>"><?=$r->provinsi_nama?></option>
+					            <?php endforeach ; ?>
 					        </select>
 			            </div>
 			        </div>
@@ -265,8 +269,11 @@
 			        <div class="form-group">
 			            <label class="col-sm-3 control-label">Kota</label>
 			            <div class="col-sm-8">
-			                <select class="form-control" name="kota_id" id="select_kota" required>
+			                <select class="form-control" name="kota_id" id="select_kota1" required>
+					            <option value="#">......</option>
+					            <?php foreach ($kota as $r):?>
 					            <option value="<?=$r->kota_id?>" class="<?=$r->provinsi_id?>"><?=$r->kokab_nama?></option>
+					            <?php endforeach ; ?>
 					        </select>
 			            </div>
 			        </div>
@@ -296,7 +303,7 @@
                 <h4 class="modal-title">Delete User</h4>
             </div>
 
-            <form action="<?=base_url()?>admin/kelola_user/delete/<?=$r->id_user?>" class="form-horizontal pegawai" method="POST">
+            <form action="<?=base_url()?>admin/kelola_user/pegawai/delete/<?=$r->id_user?>" class="form-horizontal pegawai" method="POST">
                 <div class="modal-body">
                 	<h4>Apakah anda ingin menghapus user dengan nama <strong><?=$r->nama?> ?</strong></h4>
 		        </div>

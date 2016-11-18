@@ -1,5 +1,5 @@
 <header class="main-header">
-  <nav class="navbar navbar-static-top">
+  <nav class="navbar navbar-static-top" style="background-color: #477b63">
     <div class="container">
       <div class="navbar-header">
         <a href="<?=base_url()?>calon_pendaki/home" class="navbar-brand">Gunung Gede Pangrango</a>
@@ -11,7 +11,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="<?=base_url()?>calon_pendaki/info_gunung">Boking</a></li>
+          <li><a href="<?=base_url()?>calon_pendaki/info_gunung">Booking</a></li>
           <li><a href="<?=base_url()?>calon_pendaki/grup">Grup</a></li>
           <li><a href="<?=base_url()?>calon_pendaki/pembayaran">Pembayaran</a></li>
           <li class="dropdown">

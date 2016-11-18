@@ -58,7 +58,7 @@
                               $this->load->model('anggota_model','anggota');
                               $anggota = $this->anggota->anggota_by_grup_id($r->id_grup_pendaki); 
                               foreach($anggota as $datas):
-                                  if($datas->id_grup_pendaki == $r->id_grup_pendaki):
+                                  if($datas->id_grup_pendaki == $r->id_grup_pendaki && $datas->nama_anggota != NULL):
                               ?>
                               <tr>
                                   <td><?=$i++?></td>

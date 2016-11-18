@@ -162,23 +162,24 @@
 			    	</tr>
 			    	<tr>
 			    		<td>
-			    			<select class="form-control" name="level_anggota[]" readonly>
+			    			<select class="form-control" name="level_anggota[]">
+			    				<option value="#">Tambah Anggota</option>
 					            <option value="anggota">Anggota 3</option>
 					        </select>
 			    		</td>
 			    	</tr>
 			    	<tr>
-			    		<td><input type="text" name="no_identitas[]" class="form-control" placeholder="No Identitas" required></td>
+			    		<td><input type="text" name="no_identitas[]" class="form-control" placeholder="No Identitas"></td>
 			    	</tr>
 			    	<tr>
-			    		<td><input type="text" name="nama_anggota[]" class="form-control" placeholder="Nama" required></td>
+			    		<td><input type="text" name="nama_anggota[]" class="form-control" placeholder="Nama"></td>
 			    	</tr>
 			    	<tr>
-			    		<td><input type="text" name="alamat[]" class="form-control" placeholder="Alamat" required></td>
+			    		<td><input type="text" name="alamat[]" class="form-control" placeholder="Alamat"></td>
 			    	</tr>
 			    	<tr>
 			    		<td>
-			    			<select class="form-control"  id="select_provinsi3" required>
+			    			<select class="form-control"  id="select_provinsi3">
 					            <option value="#">- Pilih Provinsi - </option>
 					            <?php foreach ($provinsi as $r):?>
 					            <option value="<?=$r->provinsi_id?>"><?=$r->provinsi_nama?></option>
@@ -188,7 +189,7 @@
 			    	</tr>
 			    	<tr>
 			    		<td>
-			    			<select class="form-control" name="kota_id[]" id="select_kota3" required>
+			    			<select class="form-control" name="kota_id[]" id="select_kota3">
 					            <option value="#">......</option>
 					            <?php foreach ($kota as $r):?>
 					            <option value="<?=$r->kota_id?>" class="<?=$r->provinsi_id?>"><?=$r->kokab_nama?></option>
@@ -197,33 +198,34 @@
 			    		</td>
 			    	</tr>
 			    	<tr>
-			    		<td><input type="email" name="email[]" class="form-control" placeholder="Ex = contoh@gmail.com" required></td>
+			    		<td><input type="email" name="email[]" class="form-control" placeholder="Ex = contoh@gmail.com"></td>
 			    	</tr>
 			    	<tr>
-			    		<td><input type="text" name="no_telp[]" class="form-control" placeholder="No Telp/hp" required></td>
+			    		<td><input type="text" name="no_telp[]" class="form-control" placeholder="No Telp/hp"></td>
 			    	</tr>
 			    	<tr>
 			    		<td></td>
 			    	</tr>
 			    	<tr>
 			    		<td>
-			    			<select class="form-control" name="level_anggota[]" readonly>
+			    			<select class="form-control" name="level_anggota[]">
+			    				<option value="#">Tambah Anggota</option>
 					            <option value="anggota">Anggota 4</option>
 					        </select>
 			    		</td>
 			    	</tr>
 			    	<tr>
-			    		<td><input type="text" name="no_identitas[]" class="form-control" placeholder="No Identitas" required></td>
+			    		<td><input type="text" name="no_identitas[]" class="form-control" placeholder="No Identitas"></td>
 			    	</tr>
 			    	<tr>
-			    		<td><input type="text" name="nama_anggota[]" class="form-control" placeholder="Nama" required></td>
+			    		<td><input type="text" name="nama_anggota[]" class="form-control" placeholder="Nama"></td>
 			    	</tr>
 			    	<tr>
-			    		<td><input type="text" name="alamat[]" class="form-control" placeholder="Alamat" required></td>
+			    		<td><input type="text" name="alamat[]" class="form-control" placeholder="Alamat"></td>
 			    	</tr>
 			    	<tr>
 			    		<td>
-			    			<select class="form-control"  id="select_provinsi4" required>
+			    			<select class="form-control"  id="select_provinsi4">
 					            <option value="#">- Pilih Provinsi - </option>
 					            <?php foreach ($provinsi as $r):?>
 					            <option value="<?=$r->provinsi_id?>"><?=$r->provinsi_nama?></option>
@@ -233,7 +235,7 @@
 			    	</tr>
 			    	<tr>
 			    		<td>
-			    			<select class="form-control" name="kota_id[]" id="select_kota4" required>
+			    			<select class="form-control" name="kota_id[]" id="select_kota4">
 					            <option value="#">......</option>
 					            <?php foreach ($kota as $r):?>
 					            <option value="<?=$r->kota_id?>" class="<?=$r->provinsi_id?>"><?=$r->kokab_nama?></option>
@@ -242,10 +244,10 @@
 			    		</td>
 			    	</tr>
 			    	<tr>
-			    		<td><input type="email" name="email[]" class="form-control" placeholder="Ex = contoh@gmail.com" required></td>
+			    		<td><input type="email" name="email[]" class="form-control" placeholder="Ex = contoh@gmail.com"></td>
 			    	</tr>
 			    	<tr>
-			    		<td><input type="text" name="no_telp[]" class="form-control" placeholder="No Telp/hp" required></td>
+			    		<td><input type="text" name="no_telp[]" class="form-control" placeholder="No Telp/hp"></td>
 			    	</tr>
 			    	<tr>
 			    		<td></td>

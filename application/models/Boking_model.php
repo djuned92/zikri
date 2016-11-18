@@ -5,13 +5,26 @@ class Boking_model extends CI_Model {
 
 	public function get_all()
 	{
-		$q = $this->db->select('b.*, gp.*, jp.* , jadwal.*') // , a.*
+		// $q = $this->db->select('b.*, gp.*, jp.* , jadwal.*') // , a.*
+		// 				->from('boking as b')
+		// 				->join('grup_pendaki as gp','gp.id_grup_pendaki = b.id_grup_pendaki')
+		// 				// ->join('anggota as a','a.id_grup_pendaki = gp.id_grup_pendaki')
+		// 				->join('jadwal_pendakian as jadwal','jadwal.id_jadwal_pendakian = b.id_jadwal_pendakian')
+		// 				->join('jalur_pendakian as jp','jp.id_jalur_pendakian = jadwal.id_jalur_pendakian')
+		// 				// ->group_by('jadwal.tanggal_pendakian')
+		// 				->order_by('b.id_boking','DESC')
+		// 				->get();
+		// return $q->result();
+
+		$q = $this->db->select('b.*, gp.*, jp.* , jadwal.*, u.username') // , a.*
 						->from('boking as b')
 						->join('grup_pendaki as gp','gp.id_grup_pendaki = b.id_grup_pendaki')
-						// ->join('anggota as a','a.id_grup_pendaki = gp.id_grup_pendaki')
+						->join('user as u','u.id_user = gp.id_user')
 						->join('jadwal_pendakian as jadwal','jadwal.id_jadwal_pendakian = b.id_jadwal_pendakian')
 						->join('jalur_pendakian as jp','jp.id_jalur_pendakian = jadwal.id_jalur_pendakian')
 						// ->group_by('jadwal.tanggal_pendakian')
+						// ->where('jp.nama_jalur','Jalur Cibodas')
+						->order_by('b.id_boking','DESC')
 						->get();
 		return $q->result();
 	}
@@ -26,6 +39,7 @@ class Boking_model extends CI_Model {
 						->join('jalur_pendakian as jp','jp.id_jalur_pendakian = jadwal.id_jalur_pendakian')
 						// ->group_by('jadwal.tanggal_pendakian')
 						->where('jp.nama_jalur','Jalur Cibodas')
+						->order_by('b.id_boking','DESC')
 						->get();
 		return $q->result();
 	}
@@ -40,6 +54,7 @@ class Boking_model extends CI_Model {
 						->join('jalur_pendakian as jp','jp.id_jalur_pendakian = jadwal.id_jalur_pendakian')
 						// ->group_by('jadwal.tanggal_pendakian')
 						->where('jp.nama_jalur','Jalur Putri')
+						->order_by('b.id_boking','DESC')
 						->get();
 		return $q->result();
 	}
@@ -54,6 +69,7 @@ class Boking_model extends CI_Model {
 						->join('jalur_pendakian as jp','jp.id_jalur_pendakian = jadwal.id_jalur_pendakian')
 						// ->group_by('jadwal.tanggal_pendakian')
 						->where('jp.nama_jalur','Jalur Salabintana')
+						->order_by('b.id_boking','DESC')
 						->get();
 		return $q->result();
 	}
@@ -71,10 +87,12 @@ class Boking_model extends CI_Model {
 
 	public function total_pendaki($id_grup_pendaki)
 	{
+		$where = "a.id_grup_pendaki = $id_grup_pendaki AND a.no_identitas != 'NULL'";
 		$q = $this->db->select('gp.id_grup_pendaki, a.*')
 						->from('grup_pendaki as gp')
 						->join('anggota as a','a.id_grup_pendaki = gp.id_grup_pendaki')
-						->where('a.id_grup_pendaki', $id_grup_pendaki)
+						// ->where('a.id_grup_pendaki', $id_grup_pendaki)
+						->where($where)
 						->get();
 		return $q->num_rows();
 		// return $q->result();

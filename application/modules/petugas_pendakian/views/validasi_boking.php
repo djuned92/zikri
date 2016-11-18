@@ -21,6 +21,7 @@
                     <th>Nama Grup</th>
                     <th>Total Pendaki</th>
                     <th>Jalur & Tanggal Pendakian</th>
+                    <th>Status</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
@@ -37,7 +38,20 @@
                       ?>
                     </td>
                     <td><?=$r->nama_jalur?> & <?=$r->tanggal_pendakian?></td>
-                    <td></td>
+                    <td><?=$r->status?></td>
+                    <td>
+                      <button class="btn btn-xs btn-danger" data-toggle="modal" data-target="#bokingNotValid<?=$r->id_boking?>" data-placement="bottom" title="Validasi Boking">
+                          <i class="fa fa-close"></i>
+                      </button>
+
+                      <button class="btn btn-xs btn-warning" data-toggle="modal" data-target="#detailBoking<?=$r->id_grup_pendaki?>" data-placement="bottom" title="Detail">
+                         <i class="fa fa-eye"></i>
+                      </button>
+
+                      <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#bokingValid<?=$r->id_boking?>" data-placement="bottom" title="Validasi Boking">
+                         <i class="fa fa-check"></i>
+                      </button>
+                    </td>
                   </tr>
                   <?php endforeach; ?>
                 </tbody>
@@ -51,3 +65,5 @@
     
   </div><!-- /.container -->
 </div><!-- /.content-wrapper -->
+
+<?php include "modal/boking.php"; ?>

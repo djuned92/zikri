@@ -38,7 +38,7 @@
                   <?php $i = 1; foreach($boking as $r):?>
                   <tr>
                     <td><?=$i++?></td>
-                    <td><?=$r->nama_grup?> <?=$r->username?></td>
+                    <td><?=$r->nama_grup?></td>
                     <td>
                       <?php
                         // $this->load->model('boking_model','boking');

@@ -23,7 +23,7 @@ class Info_gunung extends CI_Controller {
 		$data ['tanggal_pendakian'] = $this->jadwal_pendakian->get_tanggal_kuota();
 		$data['provinsi'] = $this->provinsi->get_all();
 		$data['kota'] = $this->kota->get_all();
-		$this->template->pendaki('info_gunung','script',$data);
+		$this->template->petugas_pendakian('info_gunung','script',$data);
 	}
 
 }

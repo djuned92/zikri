@@ -72,7 +72,7 @@ class Pegawai extends CI_Controller {
       );
     $this->users->update_user($id, $data_user, $data_pegawai);
     $this->session->set_flashdata('update_user','User berhasil diperbaharui');
-    redirect('admin/kelola_user/user_pegawai');  
+    redirect('admin/kelola_user/pegawai');  
   }
 
   public function delete($id)

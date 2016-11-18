@@ -24,12 +24,13 @@
    $('#select_kota6').chained('#select_provinsi6');
    $('#select_kota7').chained('#select_provinsi7');
    $('#select_kota8').chained('#select_provinsi8');
-   $('#select_kota8').chained('#select_provinsi8');
+   $('#select_kota9').chained('#select_provinsi9');
 </script>
 
 <script>
    $(document).ready(function(){
-    $("#id_grup_pendaki").change(function(){   
+    $("#id_grup_pendaki").change(function(){
+
        var id_grup_pendaki = $("#id_grup_pendaki").val();
        $.ajax({
           url:"<?=base_url()?>calon_pendaki/boking/total_pendaki/"+id_grup_pendaki,
@@ -37,9 +38,21 @@
           dataType:"json",
           success:function(data)
           {
-            $("#total_pendaki").append(data);
+            $("#total_pendaki").val(data);
           } 
         });
+       $.ajax({
+          url:"<?=base_url()?>calon_pendaki/boking/total_pendaki/"+id_grup_pendaki,
+          type:"GET",
+          dataType:"json",
+          success:function(data)
+          {
+            $("#total_pendaki").val(data);
+            $("[name='total_harga']").val($("[name='harga_satuan']").val()*$("[name='total_pendaki']").val());
+          } 
+        });
+       
+       
     }); 
    });
 </script>

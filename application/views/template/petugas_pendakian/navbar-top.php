@@ -12,14 +12,15 @@
       <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a href="<?=base_url()?>petugas_pendakian/info_gunung">Info Gunung</a></li>
-          <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Validasi Boking <span class="caret"></span></a>
+          <li><a href="<?=base_url()?>petugas_pendakian/validasi_boking">Validasi Booking</a></li>
+          <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Validasi Booking <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="<?=base_url()?>petugas_pendakian/validasi_boking/jalur_cibodas">Jalur Cibodas</a></li>
                 <li><a href="<?=base_url()?>petugas_pendakian/validasi_boking/jalur_putri">Jalur Putri</a></li>
                 <li><a href="<?=base_url()?>petugas_pendakian/validasi_boking/jalur_salabintana">Jalur Salabintana</a></li>
               </ul>
-            </li>
+            </li> -->
           <li><a href="<?=base_url()?>petugas_pendakian/validasi_pembayaran">Validasi Pembayaran</a></li>
          <!--  <li><a href="<?=base_url()?>kepala_balai/boking">Boking</a></li>
           <li><a href="<?=base_url()?>kepala_balai/bayar">Bayar</a></li> -->
