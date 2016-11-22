@@ -46,7 +46,19 @@
 		        			<?php $i = 1; foreach($jalur_cibodas as $r): ?>
 		        			<tr>
 		        				<td><?=$i++?></td>
-		        				<td><?=$r->tanggal_pendakian?></td>
+		        				<td>
+		        					<?php 
+		        						$jadwal = $r->tanggal_pendakian;
+		        						$data = strtotime($jadwal);
+		        						$w = date('w', $data); // hari
+		        						$j = date('j', $data); // tanggal
+		        						$n = date('n', $data); // bulan
+		        				
+		        						$hari = array('Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu');
+		        						$bulan = array('','Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember');
+		        						echo $hari[$w]. ", ".$j." ".$bulan[$n]." ".date('Y');
+		        					?>
+		        				</td>
 		        				<td><?=$r->kuota?></td>
 		        				<td><?=$r->harga?></td>
 		        				<td><?=$r->status_jalur_pendakian?></td>

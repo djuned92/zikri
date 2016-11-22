@@ -34,7 +34,7 @@
                 <tr>
                   <th>#</th>
                   <th>Nama Grup</th>
-                  <th>Create at</th>
+                  <th>Tanggal Dibuat</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
@@ -44,7 +44,19 @@
                 <tr>
                   <td><?=$i++?></td>
                   <td><?=$r->nama_grup;?></td>
-                  <td><?=$r->created_at?></td>
+                  <td>
+                    <?php
+                      $created_at = $r->created_at;
+                      $data = strtotime($created_at);
+                      $w = date('w', $data); // hari
+                      $j = date('j', $data); // tanggal
+                      $n = date('n', $data); // bulan
+                  
+                      $hari = array('Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu');
+                      $bulan = array('','Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des');
+                      echo $hari[$w]. ", ".$j." ".$bulan[$n]." ".date('y');
+                    ?>
+                  </td>
                   <td>
                     <button class="btn btn-xs btn-warning" data-toggle="modal" data-target="#detailGrupPendaki<?=$r->id_grup_pendaki?>" data-placement="bottom" title="">
                        <i class="fa fa-eye"></i>

@@ -44,7 +44,19 @@
                   <!-- foreach ke 1 ini group by tanggal -->
                   <?php foreach($tanggal_pendakian as $r): ?> 
                   <tr>
-                    <td><?php $tanggal = date_create($r->tanggal_pendakian); echo date_format($tanggal,"d M Y");?></td>
+                    <td>
+                      <?php 
+                        $jadwal = $r->tanggal_pendakian;
+                        $data = strtotime($jadwal);
+                        $w = date('w', $data); // hari
+                        $j = date('j', $data); // tanggal
+                        $n = date('n', $data); // bulan
+                    
+                        $hari = array('Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu');
+                        $bulan = array('','Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des');
+                        echo $hari[$w]. ", ".$j." ".$bulan[$n]." ".date('y');
+                      ?>
+                    </td>
                     
                     <!-- foreach ke 2 get kuota berdasarkan tanggal -->
                     <?php 

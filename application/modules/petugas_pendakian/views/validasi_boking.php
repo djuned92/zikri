@@ -5,6 +5,12 @@
       <h3>
         Validasi Boking
       </h3>
+        <?php if($this->session->flashdata('boking')):?>
+            <div class="alert alert-info">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                <strong><?php echo $this->session->flashdata('boking'); ?></strong>
+            </div>
+        <?php endif; ?>
     </section>
 
     <!-- Main content -->
