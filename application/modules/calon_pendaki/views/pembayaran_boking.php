@@ -81,7 +81,7 @@
                 
                 <div class="form-group">
                   <div class="col-md-10 col-md-offset-2">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Bayar</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat" style="background-color: #477b63">Bayar</button>
                   </div>
                 </div>
               </form>

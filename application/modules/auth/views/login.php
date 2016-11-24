@@ -24,13 +24,14 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="hold-transition login-page">
+<bodyw>
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html">Sign in</a>
+    <i class="fa fa-bookmark-o"> SIGGP</i>
+    <h4>Sistem Informasi Gunung Gede Pangrango</h4> 
   </div>
   <!-- /.login-logo -->
-  <div class="login-box-body">
+  <div class="login-box-body" style="padding:0px;">
     <?php if ($this->session->flashdata('username_not_register')) : ?>
         <strong>
             <span class='help-block'><?=$this->session->flashdata('username_not_register')?></span>
@@ -63,8 +64,8 @@
       </div>
     </form>
     
-    <a href="#">I forgot my password</a><br>
-    <a href="<?=base_url()?>auth/users/register" class="text-center">Register a new membership</a>
+    <!-- <a href="#">I forgot my password</a><br> -->
+    <a href="<?=base_url()?>auth/users/register" class="text-center">Register here</a>
 
   </div>
   <!-- /.login-box-body -->

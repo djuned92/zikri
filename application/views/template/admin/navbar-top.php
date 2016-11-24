@@ -4,7 +4,7 @@
     <!-- mini logo for sidebar mini 50x50 pixels -->
     <span class="logo-mini"><b>GG</b></span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><i class="fa fa-bookmark-o"></i> SI-Gung</span>
+    <marquee><span class="logo-lg"><i class="fa fa-bookmark-o"></i> Sistem Informasi Gunung Gede Pangrango</span></marquee>
   </a>
   <!-- Header Navbar: style can be found in header.less -->
   <nav class="navbar navbar-static-top">
@@ -128,11 +128,11 @@
             </li> -->
             <!-- Menu Footer-->
             <li class="user-footer">
-              <div class="pull-left">
+              <!-- <div class="pull-left">
                 <a href="#" class="btn btn-default btn-flat">Profile</a>
-              </div>
-              <div class="pull-right">
-                <a href="<?=base_url()?>auth/users/logout" class="btn btn-default btn-flat">Sign out</a>
+              </div> -->
+              <div>
+                <a href="<?=base_url()?>auth/users/logout" class="btn btn-default btn-flat" style="width:260px;">Sign out</a>
               </div>
             </li>
           </ul>

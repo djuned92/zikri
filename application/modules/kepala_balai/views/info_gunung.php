@@ -63,7 +63,7 @@
                         else
                         {
                           $kuota = $datas->kuota - $total_pendaki;
-                          echo $kuota;
+                          echo "<a href='' data-toggle='modal' data-target='#detailGrup$datas->id_jadwal_pendakian'>$kuota</a>";
                         }
                       ?>  
                     </td>
@@ -82,7 +82,49 @@
   </div><!-- /.container -->
 </div><!-- /.content-wrapper -->
 
-<!-- modal boking -->
-<?php 
-// include "modal/create_boking.php";
-?>
+<!-- detail Grup pendaki -->
+<!-- modal detail user pegawai -->
+<?php foreach($jadwal_pendakian as $r): ?>
+<div class="modal fade" id="detailGrup<?=$r->id_jadwal_pendakian?>" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Detail Grup Pendaki</h4>
+            </div>
+
+            <div class="modal-body">
+              <table class="table table-bordered table-striped" id="example1">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Nama Grup Pendaki</th>
+                    <th>Jumlah Pendaki</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php 
+                    $i = 1;
+                    $this->load->model('jadwal_pendakian_model','jadwal_pendakian');
+                    $detail_pendaki = $this->jadwal_pendakian->detail_grup_pendaki($r->id_jadwal_pendakian);
+                    foreach($detail_pendaki as $datas):
+                      if($datas->id_jadwal_pendakian == $r->id_jadwal_pendakian):
+                  ?>
+                  <tr>
+                    <td><?=$i++?></td>
+                    <td><?=$datas->nama_grup?></td>
+                    <td><?=$datas->total_pendaki?></td>
+                  </tr>
+                  <?php endif; endforeach; ?>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<?php endforeach; ?>

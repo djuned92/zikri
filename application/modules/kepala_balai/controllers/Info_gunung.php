@@ -21,6 +21,7 @@ class Info_gunung extends CI_Controller {
   public function index()
   {
     $data ['tanggal_pendakian'] = $this->jadwal_pendakian->get_tanggal_kuota();
+    $data ['jadwal_pendakian'] = $this->jadwal_pendakian->get_all();
     $data['provinsi'] = $this->provinsi->get_all();
     $data['kota'] = $this->kota->get_all();
     $this->template->kepala_balai('info_gunung','script',$data);

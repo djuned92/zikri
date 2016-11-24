@@ -37,7 +37,7 @@
               <!-- The user image in the navbar-->
               <img src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">Petugas Pendakian</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -45,8 +45,8 @@
                 <img src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  Petugas Pendakian
+                  <!-- <small>Member since Nov. 2012</small> -->
                 </p>
               </li>
               <!-- Menu Body -->
@@ -66,11 +66,14 @@
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
+                <!-- <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
                   <a href="<?=base_url()?>auth/users/logout" class="btn btn-default btn-flat">Sign out</a>
+                </div> -->
+                <div>
+                  <a href="<?=base_url()?>auth/users/logout" class="btn btn-default btn-flat" style="width:260px;">Sign out</a>
                 </div>
               </li>
             </ul>

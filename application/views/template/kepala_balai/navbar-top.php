@@ -55,11 +55,14 @@
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
+                <!-- <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
                   <a href="<?=base_url()?>auth/users/logout" class="btn btn-default btn-flat">Sign out</a>
+                </div> -->
+                <div>
+                  <a href="<?=base_url()?>auth/users/logout" class="btn btn-default btn-flat" style="width:260px;">Sign out</a>
                 </div>
               </li>
             </ul>

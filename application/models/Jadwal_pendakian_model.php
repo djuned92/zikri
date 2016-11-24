@@ -22,6 +22,15 @@ class Jadwal_pendakian_model extends CI_Model {
 		return $q->result();	
 	}
 
+	public function get_all()
+	{
+		$q = $this->db->select('j.*')
+						->from('jadwal_pendakian as j')
+						// ->group_by('j.tanggal_pendakian')
+						->get();
+		return $q->result();	
+	}
+
 	public function get_tanggal_kuota()
 	{
 		$q = $this->db->select('j.tanggal_pendakian, j.id_jalur_pendakian')
@@ -50,6 +59,19 @@ class Jadwal_pendakian_model extends CI_Model {
 						->get();
 		return $q->row();
 	}
+
+	public function detail_grup_pendaki($id_jadwal_pendakian)
+	{
+		$where = "p.status = 'Valid' and b.id_jadwal_pendakian = $id_jadwal_pendakian";
+		$q = $this->db->select('p.*, b.*, gp.*')
+						->from('pembayaran as p')
+						->join('boking as b','p.id_boking = b.id_boking')
+						->join('grup_pendaki as gp','gp.id_grup_pendaki = b.id_grup_pendaki')
+						->where($where)
+						->get();
+		return $q->result();
+	}
+
 
 }
 

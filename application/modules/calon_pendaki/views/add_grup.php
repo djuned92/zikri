@@ -483,7 +483,7 @@
 				
 				<div class="form-group">
                   <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Simpan</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat" style="background-color: #477b63">Simpan</button>
                   </div>
                 </div>
 			</form>
