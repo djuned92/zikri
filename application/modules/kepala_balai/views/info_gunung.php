@@ -40,7 +40,14 @@
                     
                         $hari = array('Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu');
                         $bulan = array('','Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember');
-                        echo $hari[$w]. ", ".$j." ".$bulan[$n]." ".date('Y');
+                        if($hari[$w] == "Minggu" OR $hari[$w] == "Sabtu")
+                        {
+                          echo $hari[$w]. ", ".$j." ".$bulan[$n]." ".date('Y');
+                        }
+                        else 
+                        {
+                          echo $hari[$w]. ", ".$j." ".$bulan[$n]." ".date('Y');
+                        }
                       ?>
                     </td>
                     

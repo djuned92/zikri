@@ -12,6 +12,23 @@ class Berita_model extends CI_Model {
 		return $q->row();	
 	}
 
+	// pagination
+	public function get_berita_list($limit, $start)
+	{
+		$q = $this->db->select('b.*')
+						->from('berita as b')
+						->order_by('b.id_berita')
+						->limit($start, $limit)
+						->get();
+		// $q = "select berita order by id_berita limit ' .$start. ', $limit'";
+		return $q->result();
+	}
+
+	public function count_all()
+	{
+		return $this->db->count_all('berita');
+	}
+
 	public function get_all()
 	{
 		$q = $this->db->select('b.*')

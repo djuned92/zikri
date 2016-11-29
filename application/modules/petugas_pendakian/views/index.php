@@ -15,7 +15,7 @@
             <div class="col-md-12">
               <?php foreach($berita as $r):?>
                 <div class="row">
-                  <a href="<?=base_url()?>petugas_pendakian/lihat_berita/index/<?=$r->id_berita?>" style="color:#000000;">
+                  
                     <div class="col-md-2">
                       <img src="<?=base_url()?>assets/img/<?=$r->gambar?>" class="img-responsive img-rounded" alt="Responsive image" style="widht:100px; height:100px;">     
                     </div>
@@ -24,15 +24,21 @@
                       <p><?=$r->judul?></p>
                       <?php 
                           $berita = $r->isi;
-                          $berita = (strlen($berita) > 25) ? substr($berita, 0, 100). ' ...': $berita;
+                          $berita = (strlen($berita) > 25) ? substr($berita, 0, 300). " ...<a href='http://localhost/zikri/petugas_pendakian/lihat_berita/index/$r->id_berita'> Baca selengkapnya</a>": $berita;
                       ?>
                      <p><?=$berita?></p>  
                     </div>
-                  </a>
+                  
                 </div>
                 <br/>
               <?php endforeach ?>
             </div>  
+          </div>
+
+          <div class="row">
+            <div class="col-md-offset-10 col-md-2">
+              <?=$pagination?>
+            </div>
           </div>
         </div>
       </div>

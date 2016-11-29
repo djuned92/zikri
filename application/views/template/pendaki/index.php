@@ -11,7 +11,7 @@
   
   {content}
   
-  {footer}
+  <!-- {footer} -->
 </div>
 <!-- ./wrapper -->
 
