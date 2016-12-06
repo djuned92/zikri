@@ -38,8 +38,8 @@ class Kelola_berita extends CI_Controller {
 			$config['upload_path']          = './assets/img/';
 	        $config['allowed_types']        = 'jpg|png';
 	        $config['max_size']             = 1024*10; // 10 mb
-	        $config['max_width']            = 1024;
-	        $config['max_height']           = 768;
+	        $config['max_width']            = 2000;
+	        $config['max_height']           = 1500;
 			
 			$this->upload->initialize($config); // $this->load->library('upload', $config) karena gk bisa. pake yang $this->upload->initialize($config);
 
@@ -77,8 +77,8 @@ class Kelola_berita extends CI_Controller {
 			$config['upload_path']          = './assets/img/';
 	        $config['allowed_types']        = 'jpg|png';
 	        $config['max_size']             = 1024*10; // 10 mb
-	        $config['max_width']            = 1024;
-	        $config['max_height']           = 768;
+	        $config['max_width']            = 2000;
+	        $config['max_height']           = 1500;
 			
 			$this->upload->initialize($config); // $this->load->library('upload', $config) karena gk bisa. pake yang $this->upload->initialize($config);
 

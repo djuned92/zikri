@@ -38,4 +38,44 @@ class Welcome extends CI_Controller {
 
 	}
 
+	public function test_email()
+	{
+		$this->load->library('email');
+
+			// $id_simaksi = $this->random_id_simaksi();
+			$subject = "TEST";
+			$message = "TEST ke 2";
+
+			// configure email setting
+			// $config['protocol'] = 'smtp';
+	  //       $config['smtp_host'] = 'ssl://smtp.gmail.com';
+	  //       $config['smtp_port'] = '465';
+	  //       $config['smtp_user'] = 'ahmaddjunaedi92@gmail.com'; //bangzafran445@gmail.com
+	  //       $config['smtp_pass'] = 'junjunned92'; //bastol1234567 
+	        $config['protocol'] = 'mail';
+	        $config['mailpath'] = '/usr/sbin/sendmail';
+	        $config['mailtype'] = 'html';
+	        $config['charset'] = 'iso-8859-1';
+	        $config['wordwrap'] = TRUE;
+	        $config['newline'] = "\r\n"; //use double quotes
+	        $this->email->initialize($config);
+
+	        // send email
+	        $this->email->from('ahmaddjunaedi92@gmail.com','Ahmad Djunaedi');
+	        $this->email->to('saiqulhaq@gmail.com');
+	        $this->email->subject($subject);
+	        $this->email->message($message);
+
+	        if($this->email->send())
+			{
+				
+				echo "Success";
+			}
+			else
+			{
+				print_r($this->email->print_debugger());
+			}
+ 	
+	}
+
 }

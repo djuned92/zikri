@@ -17,7 +17,7 @@ class Berita_model extends CI_Model {
 	{
 		$q = $this->db->select('b.*')
 						->from('berita as b')
-						->order_by('b.id_berita')
+						->order_by('b.id_berita','DESC')
 						->limit($start, $limit)
 						->get();
 		// $q = "select berita order by id_berita limit ' .$start. ', $limit'";

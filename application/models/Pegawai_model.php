@@ -11,7 +11,7 @@ class Pegawai_model extends CI_Model {
 						->join('jabatan as j','p.id_jabatan = j.id_jabatan')
 						->join('master_kokab as mk','mk.kota_id = p.kota_id')
 						->join('master_provinsi as mp','mk.provinsi_id = mp.provinsi_id')
-						->order_by('p.id_pegawai','DESC')
+						->order_by('u.id_user','DESC')
 						->get();
 		return $q->result();
 	}

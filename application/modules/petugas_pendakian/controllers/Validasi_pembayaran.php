@@ -37,12 +37,12 @@ class Validasi_pembayaran extends CI_Controller {
 			$message = "Pembayaran telah divalidasi, $id_simaksi ini adalah ID SIMAKSI yang digunakan waktu hari H";
 
 			// configure email setting
-			// $config['protocol'] = 'smtp';
-	        // $config['smtp_host'] = 'ssl://smtp.gmail.com';
-	        // $config['smtp_port'] = '465';
-	        // $config['smtp_user'] = 'ahmaddjunaedi92@gmail.com'; //bangzafran445@gmail.com
-	        // $config['smtp_pass'] = 'junjunned'; //bastol1234567 
-	        $config['protocol'] = 'mail';
+			$config['protocol'] = 'smtp';
+	        $config['smtp_host'] = 'ssl://smtp.gmail.com';
+	        $config['smtp_port'] = '465';
+	        $config['smtp_user'] = 'ahmaddjunaedi92@gmail.com'; //bangzafran445@gmail.com
+	        $config['smtp_pass'] = 'junjunned92'; //bastol1234567 
+	        // $config['protocol'] = 'mail';
 	        $config['mailpath'] = '/usr/sbin/sendmail';
 	        $config['mailtype'] = 'html';
 	        $config['charset'] = 'iso-8859-1';

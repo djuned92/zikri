@@ -31,55 +31,70 @@ class Pegawai extends CI_Controller {
   {
     $this->load->helper('security');  
     
-    $data_user = array(
+    $this->form_validation->set_rules('username', 'Email', 'required'); //sebatas trigger
+    if ($this->form_validation->run() == FALSE)
+    {
+      $this->index();
+    }
+    else
+    {
+      $data_user = array(
       'username'    => $this->input->post('username'),
       'level_user'  => $this->input->post('level_user'),
       'password'    => do_hash($this->input->post('password')),
       'status_user' => 'Aktif'
       );
 
-    $data_pegawai = array(
-      'id_pegawai'  => $this->input->post('id_pegawai'),
-      'id_jabatan'  => $this->input->post('id_jabatan'),
-      'kota_id'   => $this->input->post('kota_id'),
-      'nama'      => $this->input->post('nama'),
-      'alamat'    => $this->input->post('alamat'),
-      'tgl_lahir'   => $this->input->post('tgl_lahir')
-      );
-    $this->users->add_user($data_user, $data_pegawai);
-    $this->session->set_flashdata('add_user','User berhasil ditambah');
-    redirect('admin/kelola_user');
+      $data_pegawai = array(
+        'id_pegawai'  => $this->input->post('id_pegawai'),
+        'id_jabatan'  => $this->input->post('id_jabatan'),
+        'kota_id'   => $this->input->post('kota_id'),
+        'nama'      => $this->input->post('nama'),
+        'alamat'    => $this->input->post('alamat'),
+        'tgl_lahir'   => $this->input->post('tgl_lahir')
+        );
+      $this->users->add_user($data_user, $data_pegawai);
+      $this->session->set_flashdata('add_user','User berhasil ditambah');
+      redirect('admin/kelola_user/pegawai');
+    }
   }
 
   public function update($id)
   {
     $this->load->helper('security');  
-    
-    $data_user = array(
-      'username'    => $this->input->post('username'),
-      'level_user'  => $this->input->post('level_user'),
-      'password'    => do_hash($this->input->post('password')),
-      'status_user' => 'Aktif'
-      );
+    $this->form_validation->set_rules('username', 'Email', 'required'); //sebatas trigger
+    if ($this->form_validation->run() == FALSE)
+    {
+      $this->index();
+    }
+    else
+    {
+      $data_user = array(
+        'username'    => $this->input->post('username'),
+        'level_user'  => $this->input->post('level_user'),
+        'password'    => do_hash($this->input->post('password')),
+        'status_user' => 'Aktif'
+        );
 
-    $data_pegawai = array(
-      'id_pegawai'  => $this->input->post('id_pegawai'),
-      'id_jabatan'  => $this->input->post('id_jabatan'),
-      'kota_id'   => $this->input->post('kota_id'),
-      'nama'      => $this->input->post('nama'),
-      'alamat'    => $this->input->post('alamat'),
-      'tgl_lahir'   => $this->input->post('tgl_lahir')
-      );
-    $this->users->update_user($id, $data_user, $data_pegawai);
-    $this->session->set_flashdata('update_user','User berhasil diperbaharui');
-    redirect('admin/kelola_user/pegawai');  
+      $data_pegawai = array(
+        'id_pegawai'  => $this->input->post('id_pegawai'),
+        'id_jabatan'  => $this->input->post('id_jabatan'),
+        'kota_id'   => $this->input->post('kota_id'),
+        'nama'      => $this->input->post('nama'),
+        'alamat'    => $this->input->post('alamat'),
+        'tgl_lahir'   => $this->input->post('tgl_lahir')
+        );
+      $this->users->update_user($id, $data_user, $data_pegawai);
+      $this->session->set_flashdata('update_user','User berhasil diperbaharui');
+      redirect('admin/kelola_user/pegawai');
+    }  
   }
 
   public function delete($id)
   {
     $this->users->delete_user($id);
     $this->session->set_flashdata('delete_user', 'User berhasil dihapus');
-    redirect('admin/kelola_user');
+    redirect('admin/kelola_user/pegawai');
   }
 
 }
