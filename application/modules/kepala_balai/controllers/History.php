@@ -8,7 +8,7 @@ class History extends CI_Controller {
 		parent::__construct();
 		$this->load->model('grup_pendaki_model','grup_pendaki');
 
-		if ($this->session->userdata('level_user') != 'kepala_balai')
+		if ($this->session->userdata('level') != 'kepala_balai')
 	    {
 	     redirect('auth/users');
 	    }

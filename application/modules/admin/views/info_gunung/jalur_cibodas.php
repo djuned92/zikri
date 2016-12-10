@@ -92,7 +92,7 @@
                 <h4 class="modal-title">Tambah Jadwal Pendakian</h4>
             </div>
 
-            <form action="<?=base_url()?>admin/info_gunung/jalur_cibodas/add" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
+            <form action="<?=base_url()?>admin/info_gunung/jalur_cibodas/add" id="info" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
 
                 	<div class="form-group">
@@ -125,6 +125,7 @@
 			                    <option value="Pembersihan Jalur">Pembersihan Jalur</option>
 			                    <option value="Erupsi">Erupsi</option>
 			                    <option value="Aman">Aman</option>
+			                    <option value="Tutup">Tutup</option>
 			                </select>
 			            </div>
 			        </div>   	

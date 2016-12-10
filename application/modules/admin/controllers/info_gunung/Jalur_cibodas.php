@@ -9,7 +9,7 @@ class Jalur_cibodas extends CI_Controller {
 		$this->load->model('jalur_cibodas_model','jalur_cibodas');
 		$this->load->model('jadwal_pendakian_model','jadwal_pendakian');
 
-		if ($this->session->userdata('level_user') != 'admin')
+		if ($this->session->userdata('level') != 'admin')
 		{
 			redirect('auth/users');
 		}

@@ -37,9 +37,9 @@
                   	</div>
 
                 	<div class="form-group">
-	                    <label class="col-sm-3 control-label">ID Pegawai</label>
+	                    <label class="col-sm-3 control-label">NIP</label>
 	                    <div class="col-sm-8">
-	                        <input type="text" name="id_pegawai" class="form-control" placeholder="ID Pegawai" required>
+	                        <input type="text" name="id_pegawai" class="form-control" placeholder="NIP" required>
 	                    </div>
                   	</div>
 

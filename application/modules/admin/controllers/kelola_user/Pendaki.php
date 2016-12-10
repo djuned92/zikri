@@ -12,7 +12,7 @@ class Pendaki extends CI_Controller {
     $this->load->model('provinsi_model','provinsi');
     $this->load->model('kota_model','kota');
     
-    if ($this->session->userdata('level_user') != 'admin')
+    if ($this->session->userdata('level') != 'admin')
     {
      redirect('auth/users');
     }

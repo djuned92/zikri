@@ -12,7 +12,7 @@ class Pegawai extends CI_Controller {
     $this->load->model('provinsi_model','provinsi');
     $this->load->model('kota_model','kota');
     
-    if ($this->session->userdata('level_user') != 'admin')
+    if ($this->session->userdata('level') != 'admin')
     {
      redirect('auth/users');
     }
@@ -40,7 +40,7 @@ class Pegawai extends CI_Controller {
     {
       $data_user = array(
       'username'    => $this->input->post('username'),
-      'level_user'  => $this->input->post('level_user'),
+      'level'  => $this->input->post('level_user'),
       'password'    => do_hash($this->input->post('password')),
       'status_user' => 'Aktif'
       );
@@ -71,7 +71,7 @@ class Pegawai extends CI_Controller {
     {
       $data_user = array(
         'username'    => $this->input->post('username'),
-        'level_user'  => $this->input->post('level_user'),
+        'level'  => $this->input->post('level_user'),
         'password'    => do_hash($this->input->post('password')),
         'status_user' => 'Aktif'
         );

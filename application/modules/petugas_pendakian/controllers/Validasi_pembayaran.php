@@ -7,7 +7,7 @@ class Validasi_pembayaran extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('pembayaran_model','pembayaran');
-		if ($this->session->userdata('level_user') != 'petugas_pendakian')
+		if ($this->session->userdata('level') != 'petugas_pendakian')
 		{
 		 redirect('auth/users');
 		}

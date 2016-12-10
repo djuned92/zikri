@@ -5,6 +5,27 @@
   <section class="content">
     <h1>Kelola User Pegawai</h1>
 
+    <div class="row">
+        <div class="col-md-12">
+          <?php if($this->session->flashdata('add_user')):?>
+                  <div class="alert alert-info">
+                      <a href="#" class="close" data-dismiss="alert">&times;</a>
+                      <strong><?php echo $this->session->flashdata('add_user'); ?></strong>
+                  </div>
+              <?php elseif($this->session->flashdata('delete_user')):?>
+                  <div class="alert alert-info">
+                      <a href="#" class="close" data-dismiss="alert">&times;</a>
+                      <strong><?php echo $this->session->flashdata('delete_user'); ?></strong>
+                  </div>
+              <?php elseif($this->session->flashdata('update_user')):?>
+                  <div class="alert alert-info">
+                      <a href="#" class="close" data-dismiss="alert">&times;</a>
+                      <strong><?php echo $this->session->flashdata('update_user'); ?></strong>
+                  </div>
+              <?php endif; ?>
+        </div>
+    </div>
+
       <div class="row">
         <div class="col-md-12">
           <div class="box box-solid">
@@ -18,7 +39,7 @@
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th>Level User</th>
+                      <th>Level</th>
                       <th>Username</th>
                       <th>Nama</th>
                       <th>Jabatan</th>
@@ -30,7 +51,7 @@
                     <?php $i = 1; foreach($pegawai as $r): ?>
                     <tr>
                       <td><?=$i++?></td>
-                      <td><?=$r->level_user?></td>
+                      <td><?=$r->level?></td>
                       <td><?=$r->username?></td>
                       <td><?=$r->nama?></td>
                       <td><?=$r->nama_jabatan?></td>

@@ -30,10 +30,6 @@
                           <button class="btn btn-xs btn-warning" data-toggle="modal" data-target="#detailGrupPendaki<?=$r->id_user?>" data-placement="bottom" title="Detail <?=$r->nama_grup?>">
                              <i class="fa fa-eye"></i>
                           </button>
-
-                          <button class="btn btn-xs btn-danger" data-toggle="modal" data-target="#deleteGrupPendaki<?=$r->id_grup_pendaki?>" data-placement="bottom" title="Hapus <?=$r->nama_grup?>">
-                              <i class="fa fa-trash-o"></i>
-                          </button>
                         </td>
                       </tr>
                       <?php endforeach; ?>

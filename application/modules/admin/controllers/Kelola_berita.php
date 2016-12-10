@@ -8,7 +8,7 @@ class Kelola_berita extends CI_Controller {
 		parent::__construct();
 		$this->load->model('berita_model','berita');
 
-		if ($this->session->userdata('level_user') != 'admin')
+		if ($this->session->userdata('level') != 'admin')
 		{
 			redirect('auth/users');
 		}

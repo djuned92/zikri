@@ -11,7 +11,7 @@ class Home extends CI_Controller {
 
     $this->load->model('berita_model','berita');
 
-    if ($this->session->userdata('level_user') != 'kepala_balai')
+    if ($this->session->userdata('level') != 'kepala_balai')
     {
      redirect('auth/users');
     }

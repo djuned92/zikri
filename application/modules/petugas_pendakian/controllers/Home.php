@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 		$this->load->library('pagination');
 		$this->load->model('berita_model','berita');
 
-		if ($this->session->userdata('level_user') != 'petugas_pendakian')
+		if ($this->session->userdata('level') != 'petugas_pendakian')
 		{
 		 redirect('auth/users');
 		}

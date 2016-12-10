@@ -41,7 +41,7 @@
                 <div class="form-group">
                   <label class="col-md-2 control-label">Tanggal Boking</label>
                   <div class="col-md-10">
-                      <input type="date" name="tgl_boking" class="form-control">
+                      <input name="tgl_boking" class="form-control" value="<?=$boking->tanggal_pendakian?>" disabled>
                   </div>
                 </div>
 

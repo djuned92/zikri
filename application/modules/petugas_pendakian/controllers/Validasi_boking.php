@@ -9,7 +9,7 @@ class Validasi_boking extends CI_Controller {
 		$this->load->model('boking_model','boking');
 		$this->load->model('pendaki_model','pendaki');
 
-		if ($this->session->userdata('level_user') != 'petugas_pendakian')
+		if ($this->session->userdata('level') != 'petugas_pendakian')
 		{
 		 redirect('auth/users');
 		}
