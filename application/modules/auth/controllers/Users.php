@@ -98,7 +98,7 @@ class Users extends CI_Controller {
 			$data_user = array(
 				'username'	=> $this->input->post('username'),
 				'password'	=> do_hash($this->input->post('password')),
-				'level_user'=> 'calon_pendaki'
+				'level'=> 'calon_pendaki'
 				);
 
 			$this->users->register($data_user);

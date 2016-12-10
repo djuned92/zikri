@@ -61,18 +61,19 @@ class Validasi_boking extends CI_Controller {
 			$message = "Boking telah divalidasi dengan kode boking $kode_boking, segera melakukan pembayaran 1 x 24 jam";
 
 			// configure email setting
-			// $config['protocol'] = 'smtp';
-	        // $config['smtp_host'] = 'ssl://smtp.gmail.com';
-	        // $config['smtp_port'] = '465';
-	        // $config['smtp_user'] = 'ahmaddjunaedi92@gmail.com'; //bangzafran445@gmail.com
-	        // $config['smtp_pass'] = 'junjunned'; //bastol1234567 
-	        $config['protocol'] = 'mail';
+			$config['protocol'] = 'smtp';
+	        $config['smtp_host'] = 'ssl://smtp.gmail.com';
+	        $config['smtp_port'] = '465';
+	        $config['smtp_user'] = 'ahmaddjunaedi92@gmail.com'; //bangzafran445@gmail.com
+	        $config['smtp_pass'] = 'junjunned92'; //bastol1234567 
+	        // $config['protocol'] = 'mail';
 	        $config['mailpath'] = '/usr/sbin/sendmail';
 	        $config['mailtype'] = 'html';
 	        $config['charset'] = 'iso-8859-1';
 	        $config['wordwrap'] = TRUE;
 	        $config['newline'] = "\r\n"; //use double quotes
 	        $this->email->initialize($config);
+
 
 	        // send email
 	        $this->email->from('ahmaddjunaedi92@gmail.com','Ahmad Djunaedi');
@@ -117,12 +118,12 @@ class Validasi_boking extends CI_Controller {
 			$message = "Boking tidak valid!!";
 
 			// configure email setting
-			// $config['protocol'] = 'smtp';
-	        // $config['smtp_host'] = 'ssl://smtp.gmail.com';
-	        // $config['smtp_port'] = '465';
-	        // $config['smtp_user'] = 'ahmaddjunaedi92@gmail.com'; //bangzafran445@gmail.com
-	        // $config['smtp_pass'] = 'junjunned'; //bastol1234567 
-	        $config['protocol'] = 'mail';
+			$config['protocol'] = 'smtp';
+	        $config['smtp_host'] = 'ssl://smtp.gmail.com';
+	        $config['smtp_port'] = '465';
+	        $config['smtp_user'] = 'ahmaddjunaedi92@gmail.com'; //bangzafran445@gmail.com
+	        $config['smtp_pass'] = 'junjunned92'; //bastol1234567 
+	        // $config['protocol'] = 'mail';
 	        $config['mailpath'] = '/usr/sbin/sendmail';
 	        $config['mailtype'] = 'html';
 	        $config['charset'] = 'iso-8859-1';

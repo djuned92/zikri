@@ -54,14 +54,15 @@ class Boking extends CI_Controller {
 			$kode_jalur = $this->input->post('kode_jalur');
 			$id_grup_pendaki = $this->input->post('id_grup_pendaki');
 			$kode_boking = $kode_jalur.'-'.$this->random_kode_boking();
-
+			$tanggal = date_create($this->input->post('tgl_boking')); 
+			$tgl_boking = date_format($tanggal,'Y-m-d');
 			// boking
 			$boking = array(
 				'id_jadwal_pendakian'	=> $this->input->post('id_jadwal_pendakian'),
 				'kode_boking'			=> $kode_boking,
 				'id_grup_pendaki'		=> $id_grup_pendaki,
 				'total_pendaki'			=> $this->input->post('total_pendaki'),
-				'tgl_boking'			=> $this->input->post('tgl_boking'),
+				'tgl_boking'			=> $tgl_boking,
 				'total_harga'			=> $this->input->post('total_harga'),
 				'status'				=> 'Pending'
 				);
