@@ -36,7 +36,7 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+ob_start(); // line editan. ini karena add grup salah bisa dihapus jika g berguna
 /**
  * CodeIgniter URL Helpers
  *
