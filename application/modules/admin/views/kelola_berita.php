@@ -67,7 +67,7 @@
                 <h4 class="modal-title">Tambah Berita</h4>
             </div>
 
-            <form action="<?=base_url()?>admin/kelola_berita/add" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
+            <form id="berita" action="<?=base_url()?>admin/kelola_berita/add" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                 	<div class="form-group">
 	                    <label class="col-sm-1 control-label">Judul</label>
@@ -79,7 +79,7 @@
                   	<div class="form-group">
 	                    <label class="col-sm-1 control-label">isi</label>
 	                    <div class="col-sm-11">
-	                       <textarea class="form-control textarea" rows="3" name="isi" required></textarea>
+	                       <textarea class="form-control" rows="3" name="isi" required></textarea>
 	                    </div>
                   	</div>
 

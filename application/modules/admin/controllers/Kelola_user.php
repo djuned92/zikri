@@ -35,7 +35,7 @@ class Kelola_user extends CI_Controller {
 		
 		$data_user = array(
 			'username'		=> $this->input->post('username'),
-			'level_user'	=> $this->input->post('level_user'),
+			'level'			=> $this->input->post('level'),
 			'password'		=> do_hash($this->input->post('password')),
 			'status_user'	=> 'Aktif'
 			);
@@ -59,7 +59,7 @@ class Kelola_user extends CI_Controller {
 		
 		$data_user = array(
 			'username'		=> $this->input->post('username'),
-			'level_user'	=> $this->input->post('level_user'),
+			'level'			=> $this->input->post('level'),
 			'password'		=> do_hash($this->input->post('password')),
 			'status_user'	=> 'Aktif'
 			);

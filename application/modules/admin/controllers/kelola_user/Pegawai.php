@@ -40,7 +40,7 @@ class Pegawai extends CI_Controller {
     {
       $data_user = array(
       'username'    => $this->input->post('username'),
-      'level'  => $this->input->post('level_user'),
+      'level'  => $this->input->post('level'),
       'password'    => do_hash($this->input->post('password')),
       'status_user' => 'Aktif'
       );
@@ -71,7 +71,7 @@ class Pegawai extends CI_Controller {
     {
       $data_user = array(
         'username'    => $this->input->post('username'),
-        'level'  => $this->input->post('level_user'),
+        'level'  => $this->input->post('level'),
         'password'    => do_hash($this->input->post('password')),
         'status_user' => 'Aktif'
         );

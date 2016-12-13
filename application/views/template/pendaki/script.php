@@ -2,6 +2,7 @@
 <script src="<?=base_url()?>assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="<?=base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?=base_url()?>assets/bootstrap/js/bootstrap.js"></script>
 <!-- DataTables -->
 <script src="<?=base_url()?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?=base_url()?>assets/plugins/datatables/dataTables.bootstrap.min.js"></script>

@@ -7,16 +7,16 @@
                 <h4 class="modal-title">Tambah User</h4>
             </div>
 
-            <form action="<?=base_url()?>admin/kelola_user/pegawai/add" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
+            <form id="pegawai" action="<?=base_url()?>admin/kelola_user/pegawai/add" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                 	
                   	<div class="form-group">
-			            <label class="col-sm-3 control-label">Level User</label>
+			            <label class="col-sm-3 control-label">Level</label>
 			            <div class="col-sm-8">
-			                <select name="level_user" class="form-control" required>
+			                <select name="level" class="form-control" required>
 			                    <option value="">-- Pilih --</option>
 			                    <option value="admin">Admin</option>
-			                    <option value="petugas_perijinan">Petugas Perijinan Pendakian</option>
+			                    <option value="petugas_pendakian">Petugas Perijinan Pendakian</option>
 			                    <option value="kepala_balai">Kepala Balai Besar TNGGP</option>
 			                </select>
 			            </div>
@@ -81,7 +81,7 @@
                   	<div class="form-group">
 			            <label class="col-sm-3 control-label">Provinsi</label>
 			            <div class="col-sm-8">
-			                <select class="form-control"  id="select_provinsi" required>
+			                <select class="form-control" name="provinsi"  id="select_provinsi" required>
 					            <option value="#">- Pilih Provinsi - </option>
 					            <?php foreach ($provinsi as $r):?>
 					            <option value="<?=$r->provinsi_id?>"><?=$r->provinsi_nama?></option>
@@ -186,16 +186,16 @@
                 <h4 class="modal-title">Edit User Pegawai</h4>
             </div>
 
-            <form action="<?=base_url()?>admin/kelola_user/pegawai/update/<?=$r->id_user?>" class="form-horizontal" method="POST" enctype="multipart/form-data">
+            <form id="pegawai" action="<?=base_url()?>admin/kelola_user/pegawai/update/<?=$r->id_user?>" class="form-horizontal" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                 	
                   	<div class="form-group">
-			            <label class="col-sm-3 control-label">Level User</label>
+			            <label class="col-sm-3 control-label">Level</label>
 			            <div class="col-sm-8">
-			                <select name="level_user" class="form-control" required>
+			                <select name="level" class="form-control" required>
 			                    <option value="">-- Pilih --</option>
 			                    <option value="admin">Admin</option>
-			                    <option value="petugas_perijinan">Petugas Perijinan Pendakian</option>
+			                    <option value="petugas_pendakian">Petugas Perijinan Pendakian</option>
 			                    <option value="kepala_balai">Kepala Balai Besar TNGGP</option>
 			                </select>
 			            </div>

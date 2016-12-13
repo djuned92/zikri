@@ -7,7 +7,9 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/css/bootstrap.css">
+<!-- formvalidation -->
+<link rel="stylesheet" href="<?=base_url()?>assets/dist/css/formValidation.css"/>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
@@ -32,7 +34,7 @@
 
   <div class="register-box-body">
     <?=validation_errors()?>
-    <form action="<?=base_url()?>auth/users/register" method="post">
+    <form id="register" action="<?=base_url()?>auth/users/register" method="post">
       <div class="form-group has-feedback">
         <input type="email" class="form-control" name="username" placeholder="Email" required>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -64,5 +66,53 @@
 <script src="<?=base_url()?>assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="<?=base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- formvalidation -->
+<script src="<?=base_url()?>assets/dist/js/formValidation.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="<?=base_url()?>assets/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#register').formValidation({
+            framework : 'bootstrap',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Email tidak boleh kosong'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Password tidak boleh kosong'
+                        },
+                        stringlenght: {
+                            min: 6,
+                            max: 20,
+                            message: 'Password minimal 6 dan kurang dari 20'
+                        }
+                    }
+                },
+                confirm_password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'confirm password tidak boleh kosong'
+                        },
+                        identical: {
+                        field: 'password',
+                        message: 'Password tidak sama'
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>

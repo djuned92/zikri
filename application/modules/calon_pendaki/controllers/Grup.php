@@ -1,5 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Grup extends CI_Controller {
 
@@ -31,7 +30,7 @@ class Grup extends CI_Controller {
 
 	public function add()
 	{
-		$this->form_validation->set_rules('nama_grup', 'Nama Grup', 'trim|required');
+		$this->form_validation->set_rules('nama_grup', 'Nama Grup', 'required');
 		if($this->form_validation->run() == FALSE)
 		{
 			$data['provinsi'] = $this->provinsi->get_all();
@@ -73,3 +72,4 @@ class Grup extends CI_Controller {
 
 /* End of file Grup.php */
 /* Location: ./application/modules/calon_pendaki/controllers/Grup.php */
+/* biar add grup bisa harus tambah ob_start(); di file helpers/url_helper*/

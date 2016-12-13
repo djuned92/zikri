@@ -77,3 +77,146 @@
         });
     });
 </script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#berita').formValidation({
+            framework : 'bootstrap',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                judul: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Judul tidak boleh kosong'
+                        }
+                    }
+                },
+                isi: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Isi berita tidak boleh kosong'
+                        }
+                    }
+                },
+                userfile: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Gambar tidak boleh kosong'
+                        },
+                        file: {
+                            extension: 'jpg',
+                            // type: 'application/png',
+                            message: 'Tipe gambar harus .jpg'
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#pegawai').formValidation({
+            framework : 'bootstrap',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                level: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Level tidak boleh kosong'
+                        }
+                    }
+                },
+                username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Email tidak boleh kosong'
+                        },
+                        emailAddress: {
+                            message: 'Email tidak benar'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Password tidak boleh kosong'
+                        },
+                        stringlenght: {
+                            min: 6,
+                            max: 30,
+                            message: 'Panjang password minimal 6 dan kurang dari 20'
+                        }
+                    }
+                },
+                id_pegawai: {
+                    validators: {
+                        notEmpty: {
+                            message: 'NIP tidak boleh kosong'
+                        },
+                        digits: {
+                            message: 'NIP harus berupa angka'
+                        }
+                    }
+                },
+                nama: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Nama tidak boleh kosong'
+                        },
+                        stringlenght: {
+                            min: 6,
+                            max: 30,
+                            message: 'Nama minimal 6 dan kurang dari 20'
+                        }
+                    }
+                },
+                jabatan : {
+                    validators: {
+                        notEmpty: {
+                            message: 'Jabatan tidak boleh kosong'
+                        }
+                    }
+                },
+                tgl_lahir: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Tanggal lahir tidak boleh kosong'
+                        }
+                    }
+                },
+                alamat: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Alamat tidak boleh kosong'
+                        }
+                    }
+                },
+                provinsi: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Provinsi tidak boleh kosong'
+                        }
+                    }
+                },
+                kota_id: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Kota tidak boleh kosong'
+                        }
+                    }
+                },
+            }
+        });
+    });
+</script>
