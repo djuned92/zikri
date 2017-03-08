@@ -5,6 +5,8 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- Bootstrap 3.3.6 -->
 <link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/css/bootstrap.css">
+<!-- formvalidation -->
+<link rel="stylesheet" href="<?=base_url()?>assets/dist/css/formValidation.css"/>
 <!-- Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
 <!-- Ionicons -->
@@ -16,8 +18,6 @@
 <!-- AdminLTE Skins. Choose a skin from the css/skins
    folder instead of downloading all of them to reduce the load. -->
 <link rel="stylesheet" href="<?=base_url()?>assets/dist/css/skins/_all-skins.min.css">
-<!-- bootstrap wysihtml5 - text editor -->
- <link rel="stylesheet" href="<?=base_url()?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

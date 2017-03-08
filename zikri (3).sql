@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2016 at 04:04 PM
+-- Generation Time: Mar 08, 2017 at 01:20 PM
 -- Server version: 5.5.39
 -- PHP Version: 5.4.31
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `anggota` (
   `no_telp` int(12) NOT NULL,
   `level_anggota` enum('Anggota','Ketua') NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=60 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=220 ;
 
 --
 -- Dumping data for table `anggota`
@@ -87,7 +87,167 @@ INSERT INTO `anggota` (`id_anggota`, `id_grup_pendaki`, `kota_id`, `no_identitas
 (56, 10, 0, 0, '', '', '', 0, '', '2016-11-08 05:03:00'),
 (57, 10, 0, 0, '', '', '', 0, '', '2016-11-08 05:03:00'),
 (58, 10, 0, 0, '', '', '', 0, '', '2016-11-08 05:03:00'),
-(59, 10, 0, 0, '', '', '', 0, '', '2016-11-08 05:03:00');
+(59, 10, 0, 0, '', '', '', 0, '', '2016-11-08 05:03:00'),
+(60, 11, 1, 111, 'nama1', 'alamat1', '1@gmail.com', 111, 'Ketua', '2016-12-11 05:38:22'),
+(61, 11, 1, 123, 'nama2', 'alamat2', '2@gmail.com', 123, 'Anggota', '2016-12-11 05:38:22'),
+(62, 11, 1, 123, 'nama3', 'alamat3', '3@gmail.com', 333, 'Anggota', '2016-12-11 05:38:22'),
+(63, 11, 0, 0, '', '', '', 0, '', '2016-12-11 05:38:22'),
+(64, 11, 0, 0, '', '', '', 0, '', '2016-12-11 05:38:22'),
+(65, 11, 0, 0, '', '', '', 0, '', '2016-12-11 05:38:22'),
+(66, 11, 0, 0, '', '', '', 0, '', '2016-12-11 05:38:22'),
+(67, 11, 0, 0, '', '', '', 0, '', '2016-12-11 05:38:22'),
+(68, 11, 0, 0, '', '', '', 0, '', '2016-12-11 05:38:22'),
+(69, 11, 0, 0, '', '', '', 0, '', '2016-12-11 05:38:22'),
+(70, 12, 1, 111, 'nama1', 'alamat1', '1@gmail.com', 111, 'Ketua', '2016-12-11 05:48:21'),
+(71, 12, 1, 123, 'nama2', 'alamat2', '2@gmail.com', 123, 'Anggota', '2016-12-11 05:48:21'),
+(72, 12, 1, 123, 'nama3', 'alamat3', '3@gmail.com', 333, 'Anggota', '2016-12-11 05:48:21'),
+(73, 12, 0, 0, '', '', '', 0, '', '2016-12-11 05:48:21'),
+(74, 12, 0, 0, '', '', '', 0, '', '2016-12-11 05:48:21'),
+(75, 12, 0, 0, '', '', '', 0, '', '2016-12-11 05:48:21'),
+(76, 12, 0, 0, '', '', '', 0, '', '2016-12-11 05:48:21'),
+(77, 12, 0, 0, '', '', '', 0, '', '2016-12-11 05:48:21'),
+(78, 12, 0, 0, '', '', '', 0, '', '2016-12-11 05:48:21'),
+(79, 12, 0, 0, '', '', '', 0, '', '2016-12-11 05:48:21'),
+(80, 13, 2, 111, 'nama1', 'alamat1', '1@gmail.com', 111, 'Ketua', '2016-12-13 10:05:45'),
+(81, 13, 1, 111, 'nama2', 'alamat2', '2@gmail.com', 2, 'Anggota', '2016-12-13 10:05:45'),
+(82, 13, 1, 3, 'nama3', 'alamat3', '3@gmail.com', 3, 'Anggota', '2016-12-13 10:05:45'),
+(83, 13, 0, 0, '', '', '', 0, '', '2016-12-13 10:05:45'),
+(84, 13, 0, 0, '', '', '', 0, '', '2016-12-13 10:05:45'),
+(85, 13, 0, 0, '', '', '', 0, '', '2016-12-13 10:05:45'),
+(86, 13, 0, 0, '', '', '', 0, '', '2016-12-13 10:05:45'),
+(87, 13, 0, 0, '', '', '', 0, '', '2016-12-13 10:05:45'),
+(88, 13, 0, 0, '', '', '', 0, '', '2016-12-13 10:05:45'),
+(89, 13, 0, 0, '', '', '', 0, '', '2016-12-13 10:05:45'),
+(90, 14, 2, 1, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 10:07:09'),
+(91, 14, 1, 2, 'nama2', 'alamat2', '2@gmail.com', 2, 'Anggota', '2016-12-13 10:07:09'),
+(92, 14, 1, 3, 'nama3', 'alamat3', '3@gmail.com', 3, 'Anggota', '2016-12-13 10:07:09'),
+(93, 14, 0, 0, '', '', '', 0, '', '2016-12-13 10:07:09'),
+(94, 14, 0, 0, '', '', '', 0, '', '2016-12-13 10:07:09'),
+(95, 14, 0, 0, '', '', '', 0, '', '2016-12-13 10:07:09'),
+(96, 14, 0, 0, '', '', '', 0, '', '2016-12-13 10:07:09'),
+(97, 14, 0, 0, '', '', '', 0, '', '2016-12-13 10:07:09'),
+(98, 14, 0, 0, '', '', '', 0, '', '2016-12-13 10:07:09'),
+(99, 14, 0, 0, '', '', '', 0, '', '2016-12-13 10:07:09'),
+(100, 15, 1, 123, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 10:16:15'),
+(101, 15, 1, 2, 'nama2', 'alamat2', '2@gmail.com', 2, 'Anggota', '2016-12-13 10:16:15'),
+(102, 15, 1, 3, 'nama3', 'alamat3', '3@gmail.com', 3, 'Anggota', '2016-12-13 10:16:15'),
+(103, 15, 0, 0, '', '', '', 0, '', '2016-12-13 10:16:15'),
+(104, 15, 0, 0, '', '', '', 0, '', '2016-12-13 10:16:15'),
+(105, 15, 0, 0, '', '', '', 0, '', '2016-12-13 10:16:15'),
+(106, 15, 0, 0, '', '', '', 0, '', '2016-12-13 10:16:15'),
+(107, 15, 0, 0, '', '', '', 0, '', '2016-12-13 10:16:15'),
+(108, 15, 0, 0, '', '', '', 0, '', '2016-12-13 10:16:15'),
+(109, 15, 0, 0, '', '', '', 0, '', '2016-12-13 10:16:15'),
+(110, 16, 1, 1, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 10:17:55'),
+(111, 16, 1, 2, 'nama2', 'alamat2', '2@gmm', 2, 'Anggota', '2016-12-13 10:17:55'),
+(112, 16, 1, 3, 'nama3', 'alamat3', '3@gmn', 3, 'Anggota', '2016-12-13 10:17:55'),
+(113, 16, 0, 0, '', '', '', 0, '', '2016-12-13 10:17:55'),
+(114, 16, 0, 0, '', '', '', 0, '', '2016-12-13 10:17:55'),
+(115, 16, 0, 0, '', '', '', 0, '', '2016-12-13 10:17:55'),
+(116, 16, 0, 0, '', '', '', 0, '', '2016-12-13 10:17:55'),
+(117, 16, 0, 0, '', '', '', 0, '', '2016-12-13 10:17:55'),
+(118, 16, 0, 0, '', '', '', 0, '', '2016-12-13 10:17:55'),
+(119, 16, 0, 0, '', '', '', 0, '', '2016-12-13 10:17:55'),
+(120, 17, 1, 1, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 10:22:11'),
+(121, 17, 1, 2, 'nama2', 'alamat2', '2@gmm', 2, 'Anggota', '2016-12-13 10:22:11'),
+(122, 17, 1, 3, 'nama3', 'alamat3', '3@gll', 3, 'Anggota', '2016-12-13 10:22:11'),
+(123, 17, 0, 0, '', '', '', 0, '', '2016-12-13 10:22:11'),
+(124, 17, 0, 0, '', '', '', 0, '', '2016-12-13 10:22:11'),
+(125, 17, 0, 0, '', '', '', 0, '', '2016-12-13 10:22:11'),
+(126, 17, 0, 0, '', '', '', 0, '', '2016-12-13 10:22:11'),
+(127, 17, 0, 0, '', '', '', 0, '', '2016-12-13 10:22:11'),
+(128, 17, 0, 0, '', '', '', 0, '', '2016-12-13 10:22:11'),
+(129, 17, 0, 0, '', '', '', 0, '', '2016-12-13 10:22:11'),
+(130, 18, 1, 1, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 10:23:48'),
+(131, 18, 1, 2, 'nama2', 'alamat2', '2@gmail.com', 2, 'Anggota', '2016-12-13 10:23:48'),
+(132, 18, 1, 3, 'nama3', 'alamat3', '3@gmail.com', 3, 'Anggota', '2016-12-13 10:23:48'),
+(133, 18, 0, 0, '', '', '', 0, '', '2016-12-13 10:23:48'),
+(134, 18, 0, 0, '', '', '', 0, '', '2016-12-13 10:23:48'),
+(135, 18, 0, 0, '', '', '', 0, '', '2016-12-13 10:23:48'),
+(136, 18, 0, 0, '', '', '', 0, '', '2016-12-13 10:23:48'),
+(137, 18, 0, 0, '', '', '', 0, '', '2016-12-13 10:23:48'),
+(138, 18, 0, 0, '', '', '', 0, '', '2016-12-13 10:23:48'),
+(139, 18, 0, 0, '', '', '', 0, '', '2016-12-13 10:23:48'),
+(140, 19, 57, 1, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 10:42:46'),
+(141, 19, 77, 2, 'nama2', 'alamat2', '2@gml', 2, 'Anggota', '2016-12-13 10:42:46'),
+(142, 19, 167, 3, 'nama3', 'alamat3', '3@nnmm', 3, 'Anggota', '2016-12-13 10:42:46'),
+(143, 19, 0, 0, '', '', '', 0, '', '2016-12-13 10:42:46'),
+(144, 19, 0, 0, '', '', '', 0, '', '2016-12-13 10:42:46'),
+(145, 19, 0, 0, '', '', '', 0, '', '2016-12-13 10:42:46'),
+(146, 19, 0, 0, '', '', '', 0, '', '2016-12-13 10:42:46'),
+(147, 19, 0, 0, '', '', '', 0, '', '2016-12-13 10:42:46'),
+(148, 19, 0, 0, '', '', '', 0, '', '2016-12-13 10:42:46'),
+(149, 19, 0, 0, '', '', '', 0, '', '2016-12-13 10:42:46'),
+(150, 20, 1, 1, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 10:47:53'),
+(151, 20, 1, 2, 'nama2', 'alamat2', '2@gmail.com', 2, 'Anggota', '2016-12-13 10:47:53'),
+(152, 20, 58, 3, 'nama3', 'alamat3', '3@gmail.com', 3, 'Anggota', '2016-12-13 10:47:53'),
+(153, 20, 0, 0, '', '', '', 0, '', '2016-12-13 10:47:53'),
+(154, 20, 0, 0, '', '', '', 0, '', '2016-12-13 10:47:53'),
+(155, 20, 0, 0, '', '', '', 0, '', '2016-12-13 10:47:53'),
+(156, 20, 0, 0, '', '', '', 0, '', '2016-12-13 10:47:53'),
+(157, 20, 0, 0, '', '', '', 0, '', '2016-12-13 10:47:53'),
+(158, 20, 0, 0, '', '', '', 0, '', '2016-12-13 10:47:53'),
+(159, 20, 0, 0, '', '', '', 0, '', '2016-12-13 10:47:53'),
+(160, 21, 1, 1, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 10:48:02'),
+(161, 21, 1, 2, 'nama2', 'alamat2', '2@gmail.com', 2, 'Anggota', '2016-12-13 10:48:02'),
+(162, 21, 58, 3, 'nama3', 'alamat3', '3@gmail.com', 3, 'Anggota', '2016-12-13 10:48:02'),
+(163, 21, 0, 0, '', '', '', 0, '', '2016-12-13 10:48:02'),
+(164, 21, 0, 0, '', '', '', 0, '', '2016-12-13 10:48:02'),
+(165, 21, 0, 0, '', '', '', 0, '', '2016-12-13 10:48:02'),
+(166, 21, 0, 0, '', '', '', 0, '', '2016-12-13 10:48:02'),
+(167, 21, 0, 0, '', '', '', 0, '', '2016-12-13 10:48:02'),
+(168, 21, 0, 0, '', '', '', 0, '', '2016-12-13 10:48:02'),
+(169, 21, 0, 0, '', '', '', 0, '', '2016-12-13 10:48:02'),
+(170, 22, 3, 1, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 10:59:30'),
+(171, 22, 26, 2, 'nama2', 'alamat2', '2@gmail.com', 2, 'Anggota', '2016-12-13 10:59:30'),
+(172, 22, 26, 3, 'nama3', 'alamat3', '3@gmail.com', 3, 'Anggota', '2016-12-13 10:59:30'),
+(173, 22, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:30'),
+(174, 22, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:30'),
+(175, 22, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:30'),
+(176, 22, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:30'),
+(177, 22, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:30'),
+(178, 22, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:30'),
+(179, 22, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:30'),
+(180, 23, 3, 1, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 10:59:40'),
+(181, 23, 26, 2, 'nama2', 'alamat2', '2@gmail.com', 2, 'Anggota', '2016-12-13 10:59:40'),
+(182, 23, 26, 3, 'nama3', 'alamat3', '3@gmail.com', 3, 'Anggota', '2016-12-13 10:59:40'),
+(183, 23, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:40'),
+(184, 23, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:40'),
+(185, 23, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:40'),
+(186, 23, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:40'),
+(187, 23, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:40'),
+(188, 23, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:40'),
+(189, 23, 0, 0, '', '', '', 0, '', '2016-12-13 10:59:40'),
+(190, 24, 25, 1, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 11:02:26'),
+(191, 24, 2, 2, 'nama2', 'alamat2', '2@gmail.com', 2, 'Anggota', '2016-12-13 11:02:26'),
+(192, 24, 270, 3, 'nama3', 'alamat3', '3@gmail.com', 3, 'Anggota', '2016-12-13 11:02:26'),
+(193, 24, 0, 0, '', '', '', 0, '', '2016-12-13 11:02:26'),
+(194, 24, 0, 0, '', '', '', 0, '', '2016-12-13 11:02:26'),
+(195, 24, 0, 0, '', '', '', 0, '', '2016-12-13 11:02:26'),
+(196, 24, 0, 0, '', '', '', 0, '', '2016-12-13 11:02:26'),
+(197, 24, 0, 0, '', '', '', 0, '', '2016-12-13 11:02:26'),
+(198, 24, 0, 0, '', '', '', 0, '', '2016-12-13 11:02:26'),
+(199, 24, 0, 0, '', '', '', 0, '', '2016-12-13 11:02:26'),
+(200, 25, 25, 1, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 11:23:23'),
+(201, 25, 24, 2, 'nama2', 'alamat2', '2@gmail.com', 2, 'Anggota', '2016-12-13 11:23:23'),
+(202, 25, 2, 3, 'nama3', 'alamat3', '3@gmail.com', 3, 'Anggota', '2016-12-13 11:23:23'),
+(203, 25, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:23'),
+(204, 25, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:23'),
+(205, 25, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:23'),
+(206, 25, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:23'),
+(207, 25, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:23'),
+(208, 25, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:23'),
+(209, 25, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:23'),
+(210, 26, 25, 1, 'nama1', 'alamat1', '1@gmail.com', 1, 'Ketua', '2016-12-13 11:23:53'),
+(211, 26, 24, 2, 'nama2', 'alamat2', '2@gmail.com', 2, 'Anggota', '2016-12-13 11:23:53'),
+(212, 26, 2, 3, 'nama3', 'alamat3', '3@gmail.com', 3, 'Anggota', '2016-12-13 11:23:53'),
+(213, 26, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:53'),
+(214, 26, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:53'),
+(215, 26, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:53'),
+(216, 26, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:53'),
+(217, 26, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:53'),
+(218, 26, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:53'),
+(219, 26, 0, 0, '', '', '', 0, '', '2016-12-13 11:23:53');
 
 -- --------------------------------------------------------
 
@@ -101,7 +261,7 @@ CREATE TABLE IF NOT EXISTS `berita` (
   `isi` text NOT NULL,
   `gambar` varchar(25) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `berita`
@@ -112,7 +272,8 @@ INSERT INTO `berita` (`id_berita`, `judul`, `isi`, `gambar`, `created_at`) VALUE
 (5, 'Yuhu', '<b>Lorem ipsum dolor sit amet</b>, consectetur adipisicing elit, sed do eiusmod&nbsp;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&nbsp;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&nbsp;consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&nbsp;cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&nbsp;proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Chrysanthemum.jpg', '2016-11-23 05:55:36'),
 (6, 'update lagi ', '<p><b><i><u><small></small></u></i></b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&nbsp;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&nbsp;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&nbsp;consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&nbsp;cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&nbsp;proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<b><i><u><small></small></u></i></b><br></p>', 'Jellyfish.jpg', '2016-11-23 05:54:34'),
 (7, 'Tambah Berita', '<p><b><i>Lorem ipsum</i></b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br></p>', 'Tulips.jpg', '2016-11-23 05:54:19'),
-(8, 'Tambah Lagi', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, <b>sunt in culpa qui officia deserunt mollit anim id est laborum.</b><br></p>', 'Penguins.jpg', '2016-11-23 05:54:02');
+(8, 'Tambah Lagi', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, <b>sunt in culpa qui officia deserunt mollit anim id est laborum.</b><br></p>', 'Penguins.jpg', '2016-11-23 05:54:02'),
+(9, 'Add', '<p>Add?</p>', 'Desert1.jpg', '2016-12-10 16:58:45');
 
 -- --------------------------------------------------------
 
@@ -130,7 +291,7 @@ CREATE TABLE IF NOT EXISTS `boking` (
   `total_harga` int(11) NOT NULL,
   `status` varchar(25) NOT NULL,
   `create_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
 
 --
 -- Dumping data for table `boking`
@@ -146,7 +307,11 @@ INSERT INTO `boking` (`id_boking`, `kode_boking`, `id_jadwal_pendakian`, `id_gru
 (13, 'S-J1bzBf', 9, 3, 2, '2016-11-24', 80, 'Boking Valid', '2016-11-23 08:18:00'),
 (14, 'S-DhobRs', 9, 10, 3, '2016-11-26', 120, 'Boking Valid', '2016-11-24 15:52:51'),
 (15, 'S-G9PwMT', 15, 6, 2, '2016-11-27', 54000, 'Boking Valid', '2016-11-27 06:55:40'),
-(16, 'C-zVcOwZ', 13, 6, 2, '2016-11-27', 54000, 'Pending', '2016-11-29 06:01:41');
+(16, 'C-zVcOwZ', 13, 6, 2, '2016-11-27', 54000, 'Pending', '2016-11-29 06:01:41'),
+(17, 'S-6vwGuE', 15, 9, 1, '0000-00-00', 27000, 'Pending', '2016-12-10 16:36:37'),
+(18, 'S-5FKwaX', 15, 7, 5, '0000-00-00', 135000, 'Pending', '2016-12-10 16:39:18'),
+(19, 'S-EuzG83', 15, 4, 2, '0000-00-00', 54000, 'Pending', '2016-12-10 16:40:17'),
+(20, 'S-6vfCot', 15, 3, 2, '2016-12-10', 54000, 'Boking Tidak Valid', '2016-12-10 17:01:44');
 
 -- --------------------------------------------------------
 
@@ -159,7 +324,7 @@ CREATE TABLE IF NOT EXISTS `grup_pendaki` (
   `id_user` int(3) NOT NULL,
   `nama_grup` varchar(30) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
 
 --
 -- Dumping data for table `grup_pendaki`
@@ -173,7 +338,23 @@ INSERT INTO `grup_pendaki` (`id_grup_pendaki`, `id_user`, `nama_grup`, `created_
 (7, 12, 'iya iya', '2016-10-13 06:39:53'),
 (8, 12, 'lkajfds', '2016-10-13 06:50:25'),
 (9, 12, 'laskj', '2016-11-08 04:55:29'),
-(10, 12, 'black', '2016-11-08 05:03:00');
+(10, 12, 'black', '2016-11-08 05:03:00'),
+(11, 12, 'asdasd', '2016-12-11 05:38:22'),
+(12, 12, 'asdasd', '2016-12-11 05:48:21'),
+(13, 23, 'Grup', '2016-12-13 10:05:45'),
+(14, 23, 'Nama', '2016-12-13 10:07:09'),
+(15, 23, 'Weh weh', '2016-12-13 10:16:15'),
+(16, 23, 'Wak wak', '2016-12-13 10:17:55'),
+(17, 23, 'wewe', '2016-12-13 10:22:11'),
+(18, 23, 'bisa', '2016-12-13 10:23:48'),
+(19, 23, 'wew', '2016-12-13 10:42:46'),
+(20, 23, 'unyuuwevwev', '2016-12-13 10:47:52'),
+(21, 23, 'unyuuwevwev', '2016-12-13 10:48:01'),
+(22, 12, 'why', '2016-12-13 10:59:30'),
+(23, 12, 'why', '2016-12-13 10:59:40'),
+(24, 12, 'hem', '2016-12-13 11:02:26'),
+(25, 12, 'ppp', '2016-12-13 11:23:23'),
+(26, 12, 'ppp', '2016-12-13 11:23:53');
 
 -- --------------------------------------------------------
 
@@ -867,7 +1048,7 @@ CREATE TABLE IF NOT EXISTS `pegawai` (
 --
 
 INSERT INTO `pegawai` (`id_pegawai`, `id_jabatan`, `id_user`, `kota_id`, `nama`, `alamat`, `tgl_lahir`, `created_at`) VALUES
-('10930000', 1, 20, 192, 'tes admin', 'ngadimin', '2016-12-31', '2016-12-08 12:05:38'),
+('10930000', 2, 20, 270, 'tes admin', 'ngadimin', '2016-12-31', '2016-12-11 06:48:29'),
 ('111109300', 2, 11, 1, 'Kepala Balai', 'Desa bojong kenyot RT 04/012 No : 122', '1986-12-31', '2016-11-17 14:20:43'),
 ('1111093000016', 1, 10, 227, 'Prawitasari, Apt, M.Kes', 'Iya ', '2011-12-31', '2016-12-06 16:57:50');
 
@@ -897,10 +1078,10 @@ INSERT INTO `pembayaran` (`id_pembayaran`, `id_boking`, `nama`, `tanggal_bayar`,
 (3, 8, 'Ajag ijig', '2016-09-23', 90009, 'no_profile2.png', 'Valid', '2016-10-13 08:57:42'),
 (4, 9, 'wira sodikin', '2016-12-10', 150000, 'Desert2.jpg', 'Valid', '2016-10-13 09:33:35'),
 (5, 10, 'berak', '2016-12-31', 111111, 'busana-gamis-terbarugrosir-baju-gamis-modern1.jpg', 'Valid', '2016-10-20 08:30:10'),
-(6, 7, 'Prawitasari, Apt, M.Kes', '2016-12-31', 2000000, 'Hydrangeas.jpg', 'Pending', '2016-11-23 06:56:08'),
+(6, 7, 'Prawitasari, Apt, M.Kes', '2016-12-31', 2000000, 'Hydrangeas.jpg', 'Valid', '2017-01-13 08:19:52'),
 (7, 13, 'Biawak', '2016-12-31', 10000, 'Penguins1.jpg', 'Valid', '2016-11-23 08:20:05'),
-(8, 15, 'Marzekal', '2016-12-31', 11111, 'Penguins2.jpg', 'Valid', '2016-11-27 06:57:06'),
-(9, 16, 'Marzekal', '2016-12-31', 2147483647, 'Desert.jpg', 'Valid', '2016-11-27 07:10:32');
+(8, 15, 'Marzekal', '2016-12-31', 11111, 'Penguins2.jpg', 'Tidak Valid', '2016-12-10 17:11:33'),
+(9, 16, 'Marzekal', '2016-12-31', 2147483647, 'Desert.jpg', 'Tidak Valid', '2017-01-13 08:19:56');
 
 -- --------------------------------------------------------
 
@@ -915,7 +1096,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` varchar(64) NOT NULL,
   `status_user` enum('Aktif','Tidak Aktif') NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 --
 -- Dumping data for table `user`
@@ -926,10 +1107,10 @@ INSERT INTO `user` (`id_user`, `level`, `username`, `password`, `status_user`, `
 (10, 'petugas_pendakian', 'petugas_pendakian', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Aktif', '2016-12-07 07:15:48'),
 (11, 'kepala_balai', 'kepala_balai', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Aktif', '2016-12-07 07:15:48'),
 (12, 'calon_pendaki', 'pendaki', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Aktif', '2016-12-07 07:15:48'),
-(13, 'calon_pendaki', 'atl.ryuzaki@gmail.com', '40bd001563085fc35165329ea1ff5c5e', 'Aktif', '2016-09-28 12:13:41'),
-(14, 'calon_pendaki', 'saiqulhaq@gmail.com', '7c4a8d09ca3762af61e59520943dc264', 'Aktif', '2016-11-29 06:01:07'),
-(15, 'calon_pendaki', 'saiqulhaq@gmail.com', '7c4a8d09ca3762af61e59520943dc264', 'Aktif', '2016-11-29 06:00:40'),
-(20, 'admin', 'admin@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Aktif', '2016-12-08 12:03:48');
+(13, 'calon_pendaki', 'atl.ryuzaki@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Aktif', '2016-12-10 17:14:49'),
+(20, 'admin', 'admin@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Aktif', '2016-12-08 12:03:48'),
+(21, 'calon_pendaki', 'a@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', 'Aktif', '2016-12-10 17:24:07'),
+(23, 'calon_pendaki', 'aasddd@gm', 'f10e2821bbbea527ea02200352313bc059445190', 'Aktif', '2016-12-13 09:58:20');
 
 --
 -- Indexes for dumped tables
@@ -1021,22 +1202,22 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `anggota`
 --
 ALTER TABLE `anggota`
-MODIFY `id_anggota` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=60;
+MODIFY `id_anggota` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=220;
 --
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-MODIFY `id_berita` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+MODIFY `id_berita` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `boking`
 --
 ALTER TABLE `boking`
-MODIFY `id_boking` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+MODIFY `id_boking` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `grup_pendaki`
 --
 ALTER TABLE `grup_pendaki`
-MODIFY `id_grup_pendaki` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+MODIFY `id_grup_pendaki` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `jadwal_pendakian`
 --
@@ -1071,7 +1252,7 @@ MODIFY `id_pembayaran` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
 --
 -- Constraints for dumped tables
 --

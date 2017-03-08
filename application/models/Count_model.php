@@ -25,6 +25,24 @@ class Count_model extends CI_Model {
 						->get();
 		return $q->row('kuota');
 	}
+
+	public function total_booking_pending()
+	{
+		$q = $this->db->select('b.status')
+						->from('boking as b')
+						->where('b.status', 'Pending')
+						->get();
+		return $q->num_rows();
+	}
+
+	public function total_pembayaran_pending()
+	{
+		$q = $this->db->select('p.status')
+						->from('pembayaran as p')
+						->where('p.status', 'Pending')
+						->get();
+		return $q->num_rows();
+	}
 	
 
 }

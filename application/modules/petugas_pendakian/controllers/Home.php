@@ -22,7 +22,7 @@ class Home extends CI_Controller {
 	    $config['base_url'] = 'http://localhost/zikri/petugas_pendakian/home/index';
 	    $config['total_rows'] = $this->berita->count_all(); // tbl_berita
 	    $config['per_page'] = 3;
-	    $config['uri_segment'] = 4;
+	    $config['uri_segment' ] = 4;
 	    $choice = $config['total_rows'] / $config['per_page'];
 	    $config['num_links'] = floor($choice);
 

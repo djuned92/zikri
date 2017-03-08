@@ -122,7 +122,7 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#pegawai').formValidation({
+        $('.pegawai').formValidation({
             framework : 'bootstrap',
             icon: {
                 valid: 'glyphicon glyphicon-ok',

@@ -7,7 +7,7 @@
                 <h4 class="modal-title">Tambah User</h4>
             </div>
 
-            <form id="pegawai" action="<?=base_url()?>admin/kelola_user/pegawai/add" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
+            <form id="" action="<?=base_url()?>admin/kelola_user/pegawai/add" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                 	
                   	<div class="form-group">
@@ -186,7 +186,7 @@
                 <h4 class="modal-title">Edit User Pegawai</h4>
             </div>
 
-            <form id="pegawai" action="<?=base_url()?>admin/kelola_user/pegawai/update/<?=$r->id_user?>" class="form-horizontal" method="POST" enctype="multipart/form-data">
+            <form  action="<?=base_url()?>admin/kelola_user/pegawai/update/<?=$r->id_user?>" class="form-horizontal pegawai" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                 	
                   	<div class="form-group">

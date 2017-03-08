@@ -47,12 +47,12 @@ class Welcome extends CI_Controller {
 			$message = "TEST ke 2";
 
 			// configure email setting
-			// $config['protocol'] = 'smtp';
-	  //       $config['smtp_host'] = 'ssl://smtp.gmail.com';
-	  //       $config['smtp_port'] = '465';
-	  //       $config['smtp_user'] = 'ahmaddjunaedi92@gmail.com'; //bangzafran445@gmail.com
-	  //       $config['smtp_pass'] = 'junjunned92'; //bastol1234567 
-	        $config['protocol'] = 'mail';
+			$config['protocol'] = 'smtp';
+	        $config['smtp_host'] = 'ssl://smtp.gmail.com';
+	        $config['smtp_port'] = '465';
+	        $config['smtp_user'] = 'marzekal.123@gmail.com'; //bangzafran445@gmail.com
+	        $config['smtp_pass'] = '123456zik'; //bastol1234567 
+	        // $config['protocol'] = 'mail';
 	        $config['mailpath'] = '/usr/sbin/sendmail';
 	        $config['mailtype'] = 'html';
 	        $config['charset'] = 'iso-8859-1';
@@ -61,8 +61,8 @@ class Welcome extends CI_Controller {
 	        $this->email->initialize($config);
 
 	        // send email
-	        $this->email->from('ahmaddjunaedi92@gmail.com','Ahmad Djunaedi');
-	        $this->email->to('saiqulhaq@gmail.com');
+	        $this->email->from('marzekal.123@gmail.com','Marzekal Zikri');
+	        $this->email->to('ahmaddjunaedi92@gmail.com');
 	        $this->email->subject($subject);
 	        $this->email->message($message);
 

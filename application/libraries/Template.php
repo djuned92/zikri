@@ -66,6 +66,9 @@ class Template {
 
 	public function petugas_pendakian($content, $script = NULL, $data = NULL)
 	{
+		$this->CI->load->model('count_model','count');
+		$data['total_booking_pending'] = $this->CI->count->total_booking_pending();
+		$data['total_pembayaran_pending'] = $this->CI->count->total_pembayaran_pending();
 		$data = array(
 			'head'			=> $this->CI->load->view('template/petugas_pendakian/head', $data, TRUE),
 			'navbar-top'	=> $this->CI->load->view('template/petugas_pendakian/navbar-top', $data, TRUE),

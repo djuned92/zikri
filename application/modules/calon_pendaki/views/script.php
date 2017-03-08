@@ -56,3 +56,39 @@
     }); 
    });
 </script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#grup').formValidation({
+            framework : 'bootstrap',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                nama_grup: {
+                  validators: {
+                    notEmpty: {
+                      message: 'Nama grup tidak boleh kosong'
+                    }
+                  }
+                },
+                'no_identitas[]': {
+                  validators: {
+                      digits: {
+                        message: 'NO Identitas harus berupa angka'
+                      }
+                  }
+                },
+                'no_telp[]': {
+                  validators: {
+                      digits: {
+                        message: 'NO Identitas harus berupa angka'
+                      }
+                  }
+                }, 
+            }
+        });
+    });
+</script>
